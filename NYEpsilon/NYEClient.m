@@ -26,30 +26,56 @@
                                                               diskPath:nil];
         
         [config setURLCache:cache];
-        
         _sharedClient = [[NYEClient alloc] initWithBaseURL:baseURL
                                          sessionConfiguration:config];
         _sharedClient.responseSerializer = [AFJSONResponseSerializer serializer];
+        _sharedClient.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+
     });
     
     return _sharedClient;
+}
+- (NSURLSessionDataTask *)eventsFromMonth:(NSString *)startMonth untilMonth:(NSString *)endMonth completion:( void (^)(NSDictionary *results, NSError *error) )completion {
+
+    NSURLSessionDataTask *task = [self GET:@"events"
+                                parameters:@{ @"startMonth" : startMonth,
+                                              @"endMonth" : endMonth }
+                                   success:^(NSURLSessionDataTask *task, id responseObject) {
+                                       NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)task.response;
+
+                                       if (httpResponse.statusCode == 200) {
+                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                               NSLog(@"Results: %@\n%@", [responseObject class], responseObject);
+                                               completion(responseObject, nil);
+                                           });
+                                       } else {
+                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                               completion(nil, nil);
+                                           });
+                                           NSLog(@"Received: %@", responseObject);
+                                           NSLog(@"Received HTTP %d", httpResponse.statusCode);
+                                       }
+                                   } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                                       dispatch_async(dispatch_get_main_queue(), ^{
+                                           completion(nil, error);
+                                       });
+                                   }];
+    NSLog(@"Request: %@", task.originalRequest.URL);
+    return task;
 }
 
 - (NSURLSessionDataTask *)brothersFromClass:(NSString *)class completion:( void (^)(NSArray *results, NSError *error) )completion {
     
     /* Option for searching for individual classes - DEFAULT: Actives */
-//    NSMutableDictionary *params = nil;
-//    if(class) {
-//        [params setObject:class forKey:@"class"];
-//    }
+    if(!class) class = @"active";
     
-    NSURLSessionDataTask *task = [self GET:[NSString stringWithFormat:@"brothers/%@", (class) ? class : @"active"]
-                                parameters:nil
+    NSURLSessionDataTask *task = [self GET:@"brothers"
+                                parameters:@{ @"class" : class }
                                    success:^(NSURLSessionDataTask *task, id responseObject) {
                                        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)task.response;
                                        if (httpResponse.statusCode == 200) {
                                            dispatch_async(dispatch_get_main_queue(), ^{
-                                               completion(responseObject[@"results"], nil);
+                                               completion(responseObject, nil);
                                            });
                                        } else {
                                            dispatch_async(dispatch_get_main_queue(), ^{

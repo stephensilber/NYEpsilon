@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KIImagePager.h"
 
-@interface HouseViewController : UIViewController
+
+@interface HouseViewController : UIViewController <KIImagePagerDataSource, KIImagePagerDelegate>
 
 @end

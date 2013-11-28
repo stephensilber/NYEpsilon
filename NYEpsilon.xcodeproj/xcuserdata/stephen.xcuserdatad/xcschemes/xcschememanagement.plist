@@ -4,14 +4,34 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Downsample Images.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>NYEpsilon.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>test.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>DC4AD6A01846F74A00F0365B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC4AD6B11846F80600F0365B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DC8FC9571846DCDA00B764A6</key>
 		<dict>
 			<key>primary</key>

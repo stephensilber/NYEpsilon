@@ -1,0 +1,7 @@
+#include "Pods-AFNetworking.xcconfig"
+#include "Pods-KIImagePager.xcconfig"
+#include "Pods-MBProgressHUD.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/KIImagePager" "${PODS_ROOT}/Headers/MBProgressHUD"
+OTHER_LDFLAGS = -ObjC ${PODS_AFNETWORKING_OTHER_LDFLAGS} ${PODS_MBPROGRESSHUD_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}/Pods

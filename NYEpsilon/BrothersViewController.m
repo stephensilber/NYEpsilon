@@ -7,6 +7,7 @@
 //
 
 #import "NYEClient.h"
+#import "BrotherCell.h"
 #import "AFNetworking.h"
 #import "BrothersViewController.h"
 #import "UIImageView+AFNetworking.h"
@@ -32,27 +33,29 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    self.indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:self.indicator];
     self.navigationItem.rightBarButtonItem = item;
     
+    [super viewDidLoad];
+    
     // Default fetch request - Returns Actives
-    [self fetchBrothersFromClass:nil withApiUrl:@"brothers/actives"];
+    [self fetchBrothersFromClass:nil];
     [self.tableView setRowHeight:55];
 }
 
-- (void) fetchBrothersFromClass:(NSString *) class withApiUrl:(NSString *)apiPath {
+- (void) fetchBrothersFromClass:(NSString *) class {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     NSURLSessionDataTask *task = [[NYEClient sharedClient] brothersFromClass:class completion:^(NSArray *results, NSError *error) {
                                                                      if (results) {
                                                                          self.brothers = results;
+                                                                         NSLog(@"Successfully downloaded %i brothers", self.brothers.count);
                                                                          [self.tableView reloadData];
                                                                      } else {
                                                                          NSLog(@"ERROR: %@", error);
                                                                      }
                                                                  }];
-    [self.indicator setAnimatingWithStateOfTask:task];
+//    [self.indicator setAnimatingWithStateOfTask:task];
 
 }
 
@@ -79,14 +82,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"BrotherCell";
+    BrotherCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     NSDictionary *brother = [self.brothers objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", [brother objectForKey:@"first_name"], [brother objectForKey:@"last_name"]];
-    cell.detailTextLabel.numberOfLines = 2;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@ | %@", [brother objectForKey:@"current_city"], [brother objectForKey:@"current_state"], [brother objectForKey:@"grad_class"]];
+    cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@", [brother objectForKey:@"first_name"], [brother objectForKey:@"last_name"]];
+    cell.hometownLabel.text = [NSString stringWithFormat:@"%@, %@", [brother objectForKey:@"current_city"], [brother objectForKey:@"current_state"]];
+    cell.classLabel.text = [NSString stringWithFormat:@"%@", [brother objectForKey:@"grad_class"]];
+    
     return cell;
 }
 

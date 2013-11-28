@@ -6,7 +6,35 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		DC4AD6A01846F74A00F0365B /* Downsample Images */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DC4AD6A11846F74A00F0365B /* Build configuration list for PBXAggregateTarget "Downsample Images" */;
+			buildPhases = (
+				DC4AD6B51846F83300F0365B /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Downsample Images";
+			productName = "Downsample Images";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		50DFE3D3409C427094ED9EBE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F08D68B12A364CA3BF17CAA4 /* libPods.a */; };
+		DC4AD6981846F35700F0365B /* BrotherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4AD6971846F35700F0365B /* BrotherCell.m */; };
+		DC4AD69C1846F6FA00F0365B /* group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4AD6991846F6FA00F0365B /* group@2x.png */; };
+		DC4AD69D1846F6FA00F0365B /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4AD69A1846F6FA00F0365B /* home@2x.png */; };
+		DC4AD69E1846F6FA00F0365B /* map-marker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4AD69B1846F6FA00F0365B /* map-marker@2x.png */; };
+		DC4AD6BA1846F92300F0365B /* calendar-empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4AD6B81846F92300F0365B /* calendar-empty@2x.png */; };
+		DC4AD6BB1846F92300F0365B /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4AD6B91846F92300F0365B /* calendar@2x.png */; };
+		DC4AD6C01846FDFA00F0365B /* QMBParallaxScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4AD6BD1846FDFA00F0365B /* QMBParallaxScrollViewController.m */; };
+		DC4AD6C11846FDFA00F0365B /* UIViewController+QMBParallaxScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4AD6BF1846FDFA00F0365B /* UIViewController+QMBParallaxScrollViewController.m */; };
+		DC4AD6C9184700DC00F0365B /* ImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4AD6C8184700DC00F0365B /* ImageGalleryViewController.m */; };
+		DC4AD6CD1847013200F0365B /* house.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DC4AD6CA1847013200F0365B /* house.jpeg */; };
+		DC4AD6CE1847013200F0365B /* house2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DC4AD6CB1847013200F0365B /* house2.jpeg */; };
+		DC4AD6CF1847013200F0365B /* house3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DC4AD6CC1847013200F0365B /* house3.jpeg */; };
+		DC4AD6D21847028A00F0365B /* HouseInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4AD6D11847028A00F0365B /* HouseInformationTableViewController.m */; };
 		DC8FC95C1846DCDA00B764A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8FC95B1846DCDA00B764A6 /* Foundation.framework */; };
 		DC8FC95E1846DCDA00B764A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8FC95D1846DCDA00B764A6 /* CoreGraphics.framework */; };
 		DC8FC9601846DCDA00B764A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8FC95F1846DCDA00B764A6 /* UIKit.framework */; };
@@ -14,17 +42,27 @@
 		DC8FC9681846DCDA00B764A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC9671846DCDA00B764A6 /* main.m */; };
 		DC8FC96C1846DCDA00B764A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC96B1846DCDA00B764A6 /* AppDelegate.m */; };
 		DC8FC96F1846DCDA00B764A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC8FC96D1846DCDA00B764A6 /* Main.storyboard */; };
-		DC8FC9721846DCDA00B764A6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC9711846DCDA00B764A6 /* FirstViewController.m */; };
-		DC8FC9751846DCDA00B764A6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC9741846DCDA00B764A6 /* SecondViewController.m */; };
+		DC8FC9721846DCDA00B764A6 /* HouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC9711846DCDA00B764A6 /* HouseViewController.m */; };
+		DC8FC9751846DCDA00B764A6 /* BrothersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC9741846DCDA00B764A6 /* BrothersViewController.m */; };
 		DC8FC9771846DCDA00B764A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8FC9761846DCDA00B764A6 /* Images.xcassets */; };
 		DC8FC97E1846DCDB00B764A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8FC97D1846DCDB00B764A6 /* XCTest.framework */; };
 		DC8FC97F1846DCDB00B764A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8FC95B1846DCDA00B764A6 /* Foundation.framework */; };
 		DC8FC9801846DCDB00B764A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8FC95F1846DCDA00B764A6 /* UIKit.framework */; };
 		DC8FC9881846DCDB00B764A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC8FC9861846DCDB00B764A6 /* InfoPlist.strings */; };
 		DC8FC98A1846DCDB00B764A6 /* NYEpsilonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC9891846DCDB00B764A6 /* NYEpsilonTests.m */; };
+		DC8FC99F1846E11A00B764A6 /* NYEClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC99E1846E11A00B764A6 /* NYEClient.m */; };
+		DCCE6DF4184715190086F4DE /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE6DF3184715190086F4DE /* CKCalendarView.m */; };
+		DCCE6DF7184715970086F4DE /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE6DF6184715970086F4DE /* EventsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DC4AD6B61846F84E00F0365B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC8FC9501846DCDA00B764A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC4AD6A01846F74A00F0365B;
+			remoteInfo = "Downsample Images";
+		};
 		DC8FC9811846DCDB00B764A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DC8FC9501846DCDA00B764A6 /* Project object */;
@@ -35,6 +73,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC4AD6961846F35700F0365B /* BrotherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrotherCell.h; sourceTree = "<group>"; };
+		DC4AD6971846F35700F0365B /* BrotherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrotherCell.m; sourceTree = "<group>"; };
+		DC4AD6991846F6FA00F0365B /* group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "group@2x.png"; path = "Icons/group@2x.png"; sourceTree = "<group>"; };
+		DC4AD69A1846F6FA00F0365B /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "Icons/home@2x.png"; sourceTree = "<group>"; };
+		DC4AD69B1846F6FA00F0365B /* map-marker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-marker@2x.png"; path = "Icons/map-marker@2x.png"; sourceTree = "<group>"; };
+		DC4AD6B81846F92300F0365B /* calendar-empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calendar-empty@2x.png"; path = "Icons/calendar-empty@2x.png"; sourceTree = "<group>"; };
+		DC4AD6B91846F92300F0365B /* calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calendar@2x.png"; path = "Icons/calendar@2x.png"; sourceTree = "<group>"; };
+		DC4AD6BC1846FDFA00F0365B /* QMBParallaxScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMBParallaxScrollViewController.h; sourceTree = "<group>"; };
+		DC4AD6BD1846FDFA00F0365B /* QMBParallaxScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMBParallaxScrollViewController.m; sourceTree = "<group>"; };
+		DC4AD6BE1846FDFA00F0365B /* UIViewController+QMBParallaxScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+QMBParallaxScrollViewController.h"; sourceTree = "<group>"; };
+		DC4AD6BF1846FDFA00F0365B /* UIViewController+QMBParallaxScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+QMBParallaxScrollViewController.m"; sourceTree = "<group>"; };
+		DC4AD6C7184700DC00F0365B /* ImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryViewController.h; sourceTree = "<group>"; };
+		DC4AD6C8184700DC00F0365B /* ImageGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryViewController.m; sourceTree = "<group>"; };
+		DC4AD6CA1847013200F0365B /* house.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house.jpeg; sourceTree = "<group>"; };
+		DC4AD6CB1847013200F0365B /* house2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house2.jpeg; sourceTree = "<group>"; };
+		DC4AD6CC1847013200F0365B /* house3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house3.jpeg; sourceTree = "<group>"; };
+		DC4AD6D01847028A00F0365B /* HouseInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseInformationTableViewController.h; sourceTree = "<group>"; };
+		DC4AD6D11847028A00F0365B /* HouseInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseInformationTableViewController.m; sourceTree = "<group>"; };
 		DC8FC9581846DCDA00B764A6 /* NYEpsilon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYEpsilon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8FC95B1846DCDA00B764A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DC8FC95D1846DCDA00B764A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,16 +102,24 @@
 		DC8FC96A1846DCDA00B764A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DC8FC96B1846DCDA00B764A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DC8FC96E1846DCDA00B764A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DC8FC9701846DCDA00B764A6 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		DC8FC9711846DCDA00B764A6 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		DC8FC9731846DCDA00B764A6 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		DC8FC9741846DCDA00B764A6 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		DC8FC9701846DCDA00B764A6 /* HouseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseViewController.h; sourceTree = "<group>"; };
+		DC8FC9711846DCDA00B764A6 /* HouseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseViewController.m; sourceTree = "<group>"; };
+		DC8FC9731846DCDA00B764A6 /* BrothersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrothersViewController.h; sourceTree = "<group>"; };
+		DC8FC9741846DCDA00B764A6 /* BrothersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrothersViewController.m; sourceTree = "<group>"; };
 		DC8FC9761846DCDA00B764A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DC8FC97C1846DCDB00B764A6 /* NYEpsilonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYEpsilonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8FC97D1846DCDB00B764A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DC8FC9851846DCDB00B764A6 /* NYEpsilonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NYEpsilonTests-Info.plist"; sourceTree = "<group>"; };
 		DC8FC9871846DCDB00B764A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DC8FC9891846DCDB00B764A6 /* NYEpsilonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYEpsilonTests.m; sourceTree = "<group>"; };
+		DC8FC99D1846E11A00B764A6 /* NYEClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYEClient.h; sourceTree = "<group>"; };
+		DC8FC99E1846E11A00B764A6 /* NYEClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYEClient.m; sourceTree = "<group>"; };
+		DCCE6DF2184715190086F4DE /* CKCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarView.h; sourceTree = "<group>"; };
+		DCCE6DF3184715190086F4DE /* CKCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarView.m; sourceTree = "<group>"; };
+		DCCE6DF5184715970086F4DE /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		DCCE6DF6184715970086F4DE /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		E3D9D6648FD0496DB6475732 /* Pods/Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F08D68B12A364CA3BF17CAA4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +130,7 @@
 				DC8FC95E1846DCDA00B764A6 /* CoreGraphics.framework in Frameworks */,
 				DC8FC9601846DCDA00B764A6 /* UIKit.framework in Frameworks */,
 				DC8FC95C1846DCDA00B764A6 /* Foundation.framework in Frameworks */,
+				50DFE3D3409C427094ED9EBE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +147,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC4AD69F1846F70100F0365B /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				DC4AD6B81846F92300F0365B /* calendar-empty@2x.png */,
+				DC4AD6B91846F92300F0365B /* calendar@2x.png */,
+				DC4AD6991846F6FA00F0365B /* group@2x.png */,
+				DC4AD69A1846F6FA00F0365B /* home@2x.png */,
+				DC4AD69B1846F6FA00F0365B /* map-marker@2x.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		DC4AD6C51847009200F0365B /* Third Party Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DCCE6DF2184715190086F4DE /* CKCalendarView.h */,
+				DCCE6DF3184715190086F4DE /* CKCalendarView.m */,
+				DC4AD6BC1846FDFA00F0365B /* QMBParallaxScrollViewController.h */,
+				DC4AD6BD1846FDFA00F0365B /* QMBParallaxScrollViewController.m */,
+				DC4AD6BE1846FDFA00F0365B /* UIViewController+QMBParallaxScrollViewController.h */,
+				DC4AD6BF1846FDFA00F0365B /* UIViewController+QMBParallaxScrollViewController.m */,
+			);
+			name = "Third Party Classes";
+			sourceTree = "<group>";
+		};
+		DC4AD6D31847031D00F0365B /* The House */ = {
+			isa = PBXGroup;
+			children = (
+				DC4AD6C7184700DC00F0365B /* ImageGalleryViewController.h */,
+				DC4AD6C8184700DC00F0365B /* ImageGalleryViewController.m */,
+				DC4AD6D01847028A00F0365B /* HouseInformationTableViewController.h */,
+				DC4AD6D11847028A00F0365B /* HouseInformationTableViewController.m */,
+				DC8FC9701846DCDA00B764A6 /* HouseViewController.h */,
+				DC8FC9711846DCDA00B764A6 /* HouseViewController.m */,
+			);
+			name = "The House";
+			sourceTree = "<group>";
+		};
 		DC8FC94F1846DCDA00B764A6 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +192,7 @@
 				DC8FC9831846DCDB00B764A6 /* NYEpsilonTests */,
 				DC8FC95A1846DCDA00B764A6 /* Frameworks */,
 				DC8FC9591846DCDA00B764A6 /* Products */,
+				E3D9D6648FD0496DB6475732 /* Pods/Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +212,7 @@
 				DC8FC95D1846DCDA00B764A6 /* CoreGraphics.framework */,
 				DC8FC95F1846DCDA00B764A6 /* UIKit.framework */,
 				DC8FC97D1846DCDB00B764A6 /* XCTest.framework */,
+				F08D68B12A364CA3BF17CAA4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,13 +220,23 @@
 		DC8FC9611846DCDA00B764A6 /* NYEpsilon */ = {
 			isa = PBXGroup;
 			children = (
+				DC4AD6D31847031D00F0365B /* The House */,
+				DC4AD6C51847009200F0365B /* Third Party Classes */,
+				DC4AD69F1846F70100F0365B /* Icons */,
 				DC8FC96A1846DCDA00B764A6 /* AppDelegate.h */,
 				DC8FC96B1846DCDA00B764A6 /* AppDelegate.m */,
 				DC8FC96D1846DCDA00B764A6 /* Main.storyboard */,
-				DC8FC9701846DCDA00B764A6 /* FirstViewController.h */,
-				DC8FC9711846DCDA00B764A6 /* FirstViewController.m */,
-				DC8FC9731846DCDA00B764A6 /* SecondViewController.h */,
-				DC8FC9741846DCDA00B764A6 /* SecondViewController.m */,
+				DC4AD6961846F35700F0365B /* BrotherCell.h */,
+				DC4AD6971846F35700F0365B /* BrotherCell.m */,
+				DC8FC9731846DCDA00B764A6 /* BrothersViewController.h */,
+				DC8FC9741846DCDA00B764A6 /* BrothersViewController.m */,
+				DCCE6DF5184715970086F4DE /* EventsViewController.h */,
+				DCCE6DF6184715970086F4DE /* EventsViewController.m */,
+				DC8FC99D1846E11A00B764A6 /* NYEClient.h */,
+				DC8FC99E1846E11A00B764A6 /* NYEClient.m */,
+				DC4AD6CA1847013200F0365B /* house.jpeg */,
+				DC4AD6CB1847013200F0365B /* house2.jpeg */,
+				DC4AD6CC1847013200F0365B /* house3.jpeg */,
 				DC8FC9761846DCDA00B764A6 /* Images.xcassets */,
 				DC8FC9621846DCDA00B764A6 /* Supporting Files */,
 			);
@@ -164,13 +279,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC8FC98D1846DCDB00B764A6 /* Build configuration list for PBXNativeTarget "NYEpsilon" */;
 			buildPhases = (
+				99ECAC83A39E4992AD03941A /* Check Pods Manifest.lock */,
 				DC8FC9541846DCDA00B764A6 /* Sources */,
 				DC8FC9551846DCDA00B764A6 /* Frameworks */,
 				DC8FC9561846DCDA00B764A6 /* Resources */,
+				4900CAF01B7E40619846D876 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DC4AD6B71846F84E00F0365B /* PBXTargetDependency */,
 			);
 			name = NYEpsilon;
 			productName = NYEpsilon;
@@ -224,6 +342,7 @@
 			targets = (
 				DC8FC9571846DCDA00B764A6 /* NYEpsilon */,
 				DC8FC97B1846DCDB00B764A6 /* NYEpsilonTests */,
+				DC4AD6A01846F74A00F0365B /* Downsample Images */,
 			);
 		};
 /* End PBXProject section */
@@ -233,8 +352,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4AD69D1846F6FA00F0365B /* home@2x.png in Resources */,
+				DC4AD69E1846F6FA00F0365B /* map-marker@2x.png in Resources */,
+				DC4AD6CD1847013200F0365B /* house.jpeg in Resources */,
+				DC4AD6BA1846F92300F0365B /* calendar-empty@2x.png in Resources */,
 				DC8FC9771846DCDA00B764A6 /* Images.xcassets in Resources */,
+				DC4AD6CE1847013200F0365B /* house2.jpeg in Resources */,
+				DC4AD6CF1847013200F0365B /* house3.jpeg in Resources */,
 				DC8FC9661846DCDA00B764A6 /* InfoPlist.strings in Resources */,
+				DC4AD69C1846F6FA00F0365B /* group@2x.png in Resources */,
+				DC4AD6BB1846F92300F0365B /* calendar@2x.png in Resources */,
 				DC8FC96F1846DCDA00B764A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,15 +376,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4900CAF01B7E40619846D876 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99ECAC83A39E4992AD03941A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC4AD6B51846F83300F0365B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n# Downsamples all retina ...@2x.png images.\n\necho \"Downsampling retina images...\"\n\ndir=$(pwd)\nfind \"$dir\" -name \"*@2x.png\" | while read image; do\n\noutfile=$(dirname \"$image\")/$(basename \"$image\" @2x.png).png\n\nif [ \"$image\" -nt \"$outfile\" ]; then\nbasename \"$outfile\"\n\nwidth=$(sips -g \"pixelWidth\" \"$image\" | awk 'FNR>1 {print $2}')\nheight=$(sips -g \"pixelHeight\" \"$image\" | awk 'FNR>1 {print $2}')\nsips -z $(($height / 2)) $(($width / 2)) \"$image\" --out \"$outfile\"\n\ntest \"$outfile\" -nt \"$image\" || exit 1\nfi\ndone";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC8FC9541846DCDA00B764A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC8FC9751846DCDA00B764A6 /* SecondViewController.m in Sources */,
+				DC4AD6C11846FDFA00F0365B /* UIViewController+QMBParallaxScrollViewController.m in Sources */,
+				DCCE6DF7184715970086F4DE /* EventsViewController.m in Sources */,
+				DC8FC99F1846E11A00B764A6 /* NYEClient.m in Sources */,
+				DC4AD6C01846FDFA00F0365B /* QMBParallaxScrollViewController.m in Sources */,
+				DC8FC9751846DCDA00B764A6 /* BrothersViewController.m in Sources */,
 				DC8FC96C1846DCDA00B764A6 /* AppDelegate.m in Sources */,
-				DC8FC9721846DCDA00B764A6 /* FirstViewController.m in Sources */,
+				DC4AD6C9184700DC00F0365B /* ImageGalleryViewController.m in Sources */,
+				DC8FC9721846DCDA00B764A6 /* HouseViewController.m in Sources */,
+				DC4AD6981846F35700F0365B /* BrotherCell.m in Sources */,
+				DCCE6DF4184715190086F4DE /* CKCalendarView.m in Sources */,
 				DC8FC9681846DCDA00B764A6 /* main.m in Sources */,
+				DC4AD6D21847028A00F0365B /* HouseInformationTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +453,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DC4AD6B71846F84E00F0365B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC4AD6A01846F74A00F0365B /* Downsample Images */;
+			targetProxy = DC4AD6B61846F84E00F0365B /* PBXContainerItemProxy */;
+		};
 		DC8FC9821846DCDB00B764A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DC8FC9571846DCDA00B764A6 /* NYEpsilon */;
@@ -307,6 +493,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DC4AD6A21846F74A00F0365B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC4AD6A31846F74A00F0365B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		DC8FC98B1846DCDB00B764A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -381,6 +581,7 @@
 		};
 		DC8FC98E1846DCDB00B764A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3D9D6648FD0496DB6475732 /* Pods/Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -394,6 +595,7 @@
 		};
 		DC8FC98F1846DCDB00B764A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3D9D6648FD0496DB6475732 /* Pods/Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -450,6 +652,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DC4AD6A11846F74A00F0365B /* Build configuration list for PBXAggregateTarget "Downsample Images" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC4AD6A21846F74A00F0365B /* Debug */,
+				DC4AD6A31846F74A00F0365B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DC8FC9531846DCDA00B764A6 /* Build configuration list for PBXProject "NYEpsilon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -466,6 +677,7 @@
 				DC8FC98F1846DCDB00B764A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC8FC9901846DCDB00B764A6 /* Build configuration list for PBXNativeTarget "NYEpsilonTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +686,7 @@
 				DC8FC9921846DCDB00B764A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
