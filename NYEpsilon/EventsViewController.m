@@ -34,10 +34,6 @@
     if (self) {
         self.dateFormatter = [[NSDateFormatter alloc] init];
         [self.dateFormatter setDateFormat:@"dd/MM/yyyy"];
-        self.calendarView.delegate = self;
-        self.calendarView.onlyShowCurrentMonth = NO;
-        self.calendarView.adaptHeightToNumberOfWeeksInMonth = NO;
-        self.minimumDate = [self.dateFormatter dateFromString:@"20/08/2013"];
         
     }
     return self;
@@ -70,6 +66,9 @@
 {
     [super viewDidLoad];
     [self fetchEventsFromMonth:nil endingOnMonth:nil];
+    [self.calendarView setDelegate:self];
+    self.calendarView.onlyShowCurrentMonth = NO;
+    self.minimumDate = [self.dateFormatter dateFromString:@"20/08/2013"];
     
 }
 
@@ -102,35 +101,32 @@
 #pragma mark -
 #pragma mark - CKCalendarDelegate
 
+
+
 - (void)calendar:(CKCalendarView *)calendar didLayoutInRect:(CGRect)frame {
-    
     CGRect calendarFrame = calendar.frame;
-    CGRect tableFrame = self.tableView.frame;
-    NSLog(@"Did layout");
+    CGRect tableFrame = _tableView.frame;
     
-    tableFrame.origin.y = calendar.bounds.size.height + 15;
+    tableFrame.origin.y = calendar.bounds.size.height;
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.1];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
     
     self.calendarView.frame = calendarFrame;
-    self.tableView.frame = tableFrame;
+    _tableView.frame = tableFrame;
     
     [UIView commitAnimations];
     
 }
 
-- (void) calendar:(CKCalendarView*)calendar didChangeMonth:(NSDate *)date {
-    [self.calendarView setNeedsLayout];
-    NSLog(@"Needs layout");
-}
 
 - (void)calendar:(CKCalendarView *)calendar didSelectDate:(NSDate *)date {
     NSArray *day = [self fetchDayDataFromDate:date];
     self->dayData = (day) ? day : [NSArray array];
     [self.tableView reloadData];
 }
+
 
 - (void)calendar:(CKCalendarView *)calendar configureDateItem:(CKDateItem *)dateItem forDate:(NSDate *)date {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

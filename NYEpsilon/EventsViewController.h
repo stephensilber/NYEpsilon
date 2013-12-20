@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "CKCalendarView.h"
-@interface EventsViewController : UIViewController <CKCalendarDelegate>
+@interface EventsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, CKCalendarDelegate>
 
 @end

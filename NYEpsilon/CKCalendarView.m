@@ -310,6 +310,9 @@
         date = [self _nextDay:date];
         dateButtonPosition++;
     }
+    if ([self.delegate respondsToSelector:@selector(calendar:didLayoutInRect:)]) {
+        [self.delegate calendar:self didLayoutInRect:self.frame];
+    }
 }
 
 - (void)_updateDayOfWeekLabels {

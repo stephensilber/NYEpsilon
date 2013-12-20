@@ -307,7 +307,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Events" id="tTm-N3-K5X"/>
                     <connections>
-                        <outlet property="calendarView" destination="trL-lX-Sz6" id="4J7-sv-kMd"/>
+                        <outlet property="calendarView" destination="trL-lX-Sz6" id="PYc-PH-F3A"/>
                         <outlet property="tableView" destination="kg8-pw-7hy" id="Z8i-Fp-dtx"/>
                     </connections>
                 </viewController>

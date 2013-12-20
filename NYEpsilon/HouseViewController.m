@@ -12,7 +12,6 @@
 #import "A3ParallaxScrollView.h"
 
 @interface HouseViewController ()
-@property (nonatomic, strong) IBOutlet A3ParallaxScrollView *scrollWrapper;
 @property (nonatomic, strong) IBOutlet KIImagePager *imagePager;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *photos;
@@ -41,14 +40,6 @@
     self.imagePager.slideshowTimeInterval = 5.0f;
     
     
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (scrollView == self.scrollWrapper) {
-        CGRect frame = self.scrollWrapper.frame;
-        frame.origin.y = scrollView.contentOffset.y;
-        self.scrollWrapper.frame = frame;
-    }
 }
 
 - (NSArray *) arrayWithImages
