@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="M0T-zu-bTo">
-                                <rect key="frame" x="0.0" y="171" width="320" height="333"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <sections>
@@ -93,15 +93,6 @@
                                     <outlet property="delegate" destination="CZ4-MO-1fc" id="0Iv-gl-mqe"/>
                                 </connections>
                             </tableView>
-                            <view alpha="0.98999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GMA-pv-Zes" customClass="KIImagePager">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="CZ4-MO-1fc" id="sxc-oP-tE1"/>
-                                    <outlet property="delegate" destination="CZ4-MO-1fc" id="9MQ-9i-VXW"/>
-                                </connections>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -110,7 +101,6 @@
                     <navigationItem key="navigationItem" title="The House" id="OXq-tk-BmO"/>
                     <connections>
                         <outlet property="chapterHistoryCell" destination="NdH-nY-S0m" id="4LU-Kc-cBO"/>
-                        <outlet property="imagePager" destination="GMA-pv-Zes" id="r9p-7E-Vfh"/>
                         <outlet property="nationalHistoryCell" destination="q4m-hg-jI2" id="aT7-DE-CVL"/>
                         <outlet property="ourHouseCell" destination="7SK-wn-2W5" id="pOF-5h-ms7"/>
                         <outlet property="tableView" destination="M0T-zu-bTo" id="op5-TA-PKg"/>

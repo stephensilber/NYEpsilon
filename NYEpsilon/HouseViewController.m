@@ -26,52 +26,18 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    self.imagePager = [[KIImagePager alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 175.0f)];
+    self.imagePager.delegate = self;
+    self.imagePager.dataSource = self;
+    
     self.photos = [NSMutableArray array];
     [self.photos addObject:[UIImage imageNamed:@"house.jpeg"]];
     [self.photos addObject:[UIImage imageNamed:@"house2.jpeg"]];
     [self.photos addObject:[UIImage imageNamed:@"house3.jpeg"]];
-
-    
-    [super viewDidLoad];
-    // create ParallaxScrollView
-    self.scrollWrapper = [[A3ParallaxScrollView alloc] initWithFrame:self.view.bounds];
-    self.scrollWrapper.delegate = self;
-    [self.view addSubview:self.scrollWrapper];
-    CGSize contentSize = self.scrollWrapper.frame.size;
-    contentSize.height *= 1.2f;
-    self.scrollWrapper.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    self.scrollWrapper.contentSize = contentSize;
-    
-    // add header and content
-    CGRect headerFrame = self.imagePager.frame;
-    headerFrame.origin.y -= 122.0f;
-    self.imagePager.frame = headerFrame;
-    [self.scrollWrapper addSubview:self.imagePager withAcceleration:CGPointMake(0.0f, 0.5f)];
-    CGRect contentFrame = self.tableView.frame;
-    contentFrame.origin.y += 122.0f;
-    self.tableView.frame = contentFrame;
-    [self.scrollWrapper addSubview:self.tableView];
-    
-    // force the table to resize the content
+    [self.tableView setTableHeaderView:self.imagePager];
     [self.tableView reloadData];
-    
-    CGRect tableFrame = self.tableView.frame;
-    tableFrame.size.height = self.tableView.contentSize.height;
-    self.tableView.frame = tableFrame;
-    
-    // add the views to the scroll view instead
-    [self.scrollWrapper addSubview:self.imagePager];
-    [self.scrollWrapper addSubview:self.tableView];
-    
-    // set the content size
-    self.scrollWrapper.contentSize = CGSizeMake(self.scrollWrapper.frame.size.width,
-                                                  self.imagePager.frame.size.height +
-                                                  self.tableView.frame.size.height
-                                                  );
-    
-    [self.view addSubview:self.scrollWrapper];
 
-    
     self.imagePager.slideshowTimeInterval = 5.0f;
     
     
@@ -97,6 +63,7 @@
 
 
 #pragma mark - Table view data source
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
