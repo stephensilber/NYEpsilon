@@ -21,51 +21,19 @@
 #import "CKCalendarView.h"
 
 #define BUTTON_MARGIN 4
-#define CALENDAR_MARGIN 5
-#define TOP_HEIGHT 44
-#define DAYS_HEADER_HEIGHT 22
-#define DEFAULT_CELL_WIDTH 43
+#define CALENDAR_MARGIN 0
+#define TOP_HEIGHT 33
+#define DAYS_HEADER_HEIGHT 16
+#define DEFAULT_CELL_WIDTH 34
 #define CELL_BORDER_WIDTH 1
 
-#define DEFAULT_MONTH_BUTTON_SIZE CGSizeMake(14,17)
+#define DEFAULT_MONTH_BUTTON_SIZE CGSizeMake(7,9)
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 
 @class CALayer;
 @class CAGradientLayer;
-
-@interface GradientView : UIView
-
-@property(nonatomic, strong, readonly) CAGradientLayer *gradientLayer;
-- (void)setColors:(NSArray *)colors;
-
-@end
-
-@implementation GradientView
-
-- (id)init {
-    return [self initWithFrame:CGRectZero];
-}
-
-+ (Class)layerClass {
-    return [CAGradientLayer class];
-}
-
-- (CAGradientLayer *)gradientLayer {
-    return (CAGradientLayer *)self.layer;
-}
-
-- (void)setColors:(NSArray *)colors {
-    NSMutableArray *cgColors = [NSMutableArray array];
-    for (UIColor *color in colors) {
-        [cgColors addObject:(__bridge id)color.CGColor];
-    }
-    self.gradientLayer.colors = cgColors;
-}
-
-@end
-
 
 @interface DateButton : UIButton
 
@@ -91,7 +59,7 @@
     self = [super init];
     if (self) {
         self.backgroundColor = UIColorFromRGB(0xF2F2F2);
-        self.selectedBackgroundColor = UIColorFromRGB(0x88B6DB);
+        self.selectedBackgroundColor = [UIColor colorWithRed:0.557 green:0.326 blue:0.808 alpha:1.000];
         self.textColor = UIColorFromRGB(0x393B40);
         self.selectedTextColor = UIColorFromRGB(0xF2F2F2);
     }
@@ -107,7 +75,7 @@
 @property(nonatomic, strong) UIButton *prevButton;
 @property(nonatomic, strong) UIButton *nextButton;
 @property(nonatomic, strong) UIView *calendarContainer;
-@property(nonatomic, strong) GradientView *daysHeader;
+@property(nonatomic, strong) UIView *daysHeader;
 @property(nonatomic, strong) NSArray *dayOfWeekLabels;
 @property(nonatomic, strong) NSMutableArray *dateButtons;
 @property(nonatomic, strong) NSDateFormatter *dateFormatter;
@@ -171,13 +139,7 @@
     self.monthButtonSize = DEFAULT_MONTH_BUTTON_SIZE;
     
     self.layer.cornerRadius = 0.0f;
-    
-    UIView *highlight = [[UIView alloc] initWithFrame:CGRectZero];
-    highlight.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
-    highlight.layer.cornerRadius = 6.0f;
-    [self addSubview:highlight];
-    self.highlight = highlight;
-    
+
     // SET UP THE HEADER
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -202,15 +164,15 @@
     
     // THE CALENDAR ITSELF
     UIView *calendarContainer = [[UIView alloc] initWithFrame:CGRectZero];
-    calendarContainer.layer.borderWidth = 1.0f;
-    calendarContainer.layer.borderColor = [UIColor blackColor].CGColor;
+//    calendarContainer.layer.borderWidth = 1.0f;
+//    calendarContainer.layer.borderColor = [UIColor blackColor].CGColor;
     calendarContainer.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
-    calendarContainer.layer.cornerRadius = 4.0f;
+    calendarContainer.layer.cornerRadius = 0.0f;
     calendarContainer.clipsToBounds = YES;
     [self addSubview:calendarContainer];
     self.calendarContainer = calendarContainer;
     
-    GradientView *daysHeader = [[GradientView alloc] initWithFrame:CGRectZero];
+    UIView *daysHeader = [[UIView alloc] initWithFrame:CGRectZero];
     daysHeader.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
     [self.calendarContainer addSubview:daysHeader];
     self.daysHeader = daysHeader;
@@ -220,8 +182,6 @@
         UILabel *dayOfWeekLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         dayOfWeekLabel.textAlignment = NSTextAlignmentCenter;
         dayOfWeekLabel.backgroundColor = [UIColor clearColor];
-        dayOfWeekLabel.shadowColor = [UIColor whiteColor];
-        dayOfWeekLabel.shadowOffset = CGSizeMake(0, 1);
         [labels addObject:dayOfWeekLabel];
         [self.calendarContainer addSubview:dayOfWeekLabel];
     }
@@ -326,7 +286,7 @@
         CKDateItem *item = [[CKDateItem alloc] init];
         if ([self _dateIsToday:dateButton.date]) {
             item.textColor = UIColorFromRGB(0xF2F2F2);
-            item.backgroundColor = [UIColor lightGrayColor];
+            item.backgroundColor = [UIColor colorWithWhite:0.164 alpha:1.000];
         } else if (!self.onlyShowCurrentMonth && [self _compareByMonth:date toDate:self.monthShowing] != NSOrderedSame) {
             item.textColor = [UIColor lightGrayColor];
         }
@@ -429,11 +389,11 @@
     self.backgroundColor = UIColorFromRGB(0x393B40);
     
     [self setTitleColor:[UIColor whiteColor]];
-    [self setTitleFont:[UIFont boldSystemFontOfSize:17.0]];
+    [self setTitleFont:[UIFont boldSystemFontOfSize:13.0]];
     
     [self setDayOfWeekFont:[UIFont boldSystemFontOfSize:12.0]];
-    [self setDayOfWeekTextColor:UIColorFromRGB(0x999999)];
-    [self setDayOfWeekBottomColor:UIColorFromRGB(0xCCCFD5) topColor:[UIColor whiteColor]];
+    [self setDayOfWeekTextColor:UIColorFromRGB(0xffffff)];
+    [self setDayOfWeekBottomColor:[UIColor darkGrayColor] topColor:[UIColor whiteColor]];
     
     [self setDateFont:[UIFont boldSystemFontOfSize:16.0f]];
     [self setDateBorderColor:UIColorFromRGB(0xDAE1E6)];
@@ -463,7 +423,14 @@
     NSDateComponents* comps = [[NSDateComponents alloc] init];
     [comps setMonth:1];
     NSDate *newMonth = [self.calendar dateByAddingComponents:comps toDate:self.monthShowing options:0];
-    [self _moveCalendarToMonth:newMonth];
+    if ([self.delegate respondsToSelector:@selector(calendar:willChangeToMonth:)] && ![self.delegate calendar:self willChangeToMonth:newMonth]) {
+        return;
+    } else {
+        self.monthShowing = newMonth;
+        if ([self.delegate respondsToSelector:@selector(calendar:didChangeToMonth:)] ) {
+            [self.delegate calendar:self didChangeToMonth:self.monthShowing];
+        }
+    }
 }
 
 - (void)_moveCalendarToPreviousMonth {
@@ -539,7 +506,7 @@
 }
 
 - (void)setDayOfWeekBottomColor:(UIColor *)bottomColor topColor:(UIColor *)topColor {
-    [self.daysHeader setColors:[NSArray arrayWithObjects:topColor, bottomColor, nil]];
+    [self.daysHeader setBackgroundColor:UIColorFromRGB(0x393B40)];
 }
 
 - (void)setDateFont:(UIFont *)font {

@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--House View Controller - First-->
         <scene sceneID="W3I-pn-N6e">
             <objects>
                 <viewController title="First" id="CZ4-MO-1fc" customClass="HouseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nFK-BG-UvS"/>
+                        <viewControllerLayoutGuide type="bottom" id="VGb-y5-Buu"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2VE-Yg-loa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="M0T-zu-bTo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="M0T-zu-bTo">
+                                <rect key="frame" x="0.0" y="171" width="320" height="333"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <inset key="contentInset" minX="0.0" minY="175" maxX="0.0" maxY="44"/>
-                                <inset key="scrollIndicatorInsets" minX="0.0" minY="175" maxX="0.0" maxY="44"/>
                                 <sections>
                                     <tableViewSection headerTitle="Our House" id="Z5D-V0-Mdr">
                                         <cells>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OurHouseCell" textLabel="SQF-kp-wvS" rowHeight="284" style="IBUITableViewCellStyleDefault" id="7SK-wn-2W5">
-                                                <rect key="frame" x="0.0" y="119" width="320" height="284"/>
+                                                <rect key="frame" x="0.0" y="55" width="320" height="284"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7SK-wn-2W5" id="y2A-1w-CBI">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SQF-kp-wvS">
+                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="SQF-kp-wvS">
                                                             <rect key="frame" x="15" y="0.0" width="290" height="283"/>
                                                             <autoresizingMask key="autoresizingMask"/>
-                                                            <mutableString key="text">The chapter house, located on 12 Myrtle Avenue, is a early 19th century mansion bought from a rich farmer in 1961. Although the house is historic, the Brotherhood makes a big effort to constantly enhance the quality of living for the brothers as well as the experience of visiting guests, friends, neighbors and alumni. Each semester the House Manager holds workdays, during which the brothers participate in cleaning, masonry, carpentry, landcaping, electrical and aesthetic projects to improve the house. Pasts projects include refinishing the wood floors, building brick flower boxes for the front of the house, laying new brick walkways, and painting a large Sigma Alpha Epsilon crest in the entrance to the basement.</mutableString>
+                                                            <string key="text">The chapter house, located on 12 Myrtle Avenue, is a early 19th century mansion bought from a rich farmer in 1961. Although the house is historic, the Brotherhood makes a big effort to constantly enhance the quality of living for the brothers as well as the experience of visiting guests, friends, neighbors and alumni. Each semester the House Manager holds workdays, during which the brothers participate in cleaning, masonry, carpentry, landcaping, electrical and aesthetic projects to improve the house. Pasts projects include refinishing the wood floors, building brick flower boxes for the front of the house, laying new brick walkways, and painting a large Sigma Alpha Epsilon crest in the entrance to the basement.</string>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -44,13 +46,13 @@
                                     <tableViewSection headerTitle="Chapter History" id="E8x-Wv-6fc">
                                         <cells>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChapterHistoryCell" textLabel="7vS-mT-Rg3" rowHeight="270" style="IBUITableViewCellStyleDefault" id="NdH-nY-S0m">
-                                                <rect key="frame" x="0.0" y="451" width="320" height="270"/>
+                                                <rect key="frame" x="0.0" y="387" width="320" height="270"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NdH-nY-S0m" id="8Tm-JL-BBT">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7vS-mT-Rg3">
+                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="7vS-mT-Rg3">
                                                             <rect key="frame" x="15" y="0.0" width="290" height="269"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <string key="text">The New York Epsilon chapter of Sigma Alpha Epsilon began as a local chapter in 1948, known as Lambda Alpha Epsilon (now the name of our housing corporation). On December 8, 1951, Lambda Alpha Epsilon was installed as the New York Epsilon chapter of Sigma Alpha Epsilon, by one of Sigma Alpha Epsilon's finest and most recognized alumni, John O. Moseley. We received the designation 'Epsilon' in recognition of the founder of the chapter, Forrest K. English class of 1951 (a transfer student from Penn Theta). His letter to ΣAE national regarding the founding of a chapter here is displayed to this day in our chapter room.</string>
@@ -66,13 +68,13 @@
                                     <tableViewSection headerTitle="National History" id="uzY-Zu-6Zm">
                                         <cells>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NationalHistoryCell" textLabel="wbY-nt-sFy" rowHeight="528" style="IBUITableViewCellStyleDefault" id="q4m-hg-jI2">
-                                                <rect key="frame" x="0.0" y="769" width="320" height="528"/>
+                                                <rect key="frame" x="0.0" y="705" width="320" height="528"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q4m-hg-jI2" id="uTd-QI-lhn">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="527"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wbY-nt-sFy">
+                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="wbY-nt-sFy">
                                                             <rect key="frame" x="15" y="0.0" width="290" height="527"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <string key="text">On March 9, 1856 Sigma Alpha Epsilon was founded by eight students at the University of Alabama at Tuscaloosa. These eight founding fathers, studying in the classics, formed a fraternity governed by age old Greek principles and the highest standards for entrance. Our brothers fought on both sides of the civil war, and many chapters were lost. In fact, only one chapter stayed active throughout the entire civil war, Washington City Rho at Washington Military Academy. Many other chapters were revived after the war, including the famous Kentucky Chi, where before the war; a woman was entrusted with the sacred documents that govern Sigma Alpha Epsilon. Lucie Pattie was given the handshake by a brother of that chapter (who died in the war) and was not to release the documents to any other person until that sacred greeting was given. When a different brother returned and shook Miss Pattie's hand, the documents were received and the chapter was revived! Over the summer of 1925, the national convention spawned the idea of the first and only fraternal leadership school. Through the great depression, amazingly, not a single chapter went under. In this century of prosperity for Sigma Alpha Epsilon, we have grown to over 220 chapters with approximately 11,000 current undergraduates. In total there are over 300,000 initiated brothers of Sigma Alpha Epsilon.</string>
@@ -91,10 +93,10 @@
                                     <outlet property="delegate" destination="CZ4-MO-1fc" id="0Iv-gl-mqe"/>
                                 </connections>
                             </tableView>
-                            <view alpha="0.98999999999999999" contentMode="scaleToFill" id="GMA-pv-Zes" customClass="KIImagePager">
-                                <rect key="frame" x="0.0" y="63" width="320" height="175"/>
+                            <view alpha="0.98999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GMA-pv-Zes" customClass="KIImagePager">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="CZ4-MO-1fc" id="sxc-oP-tE1"/>
                                     <outlet property="delegate" destination="CZ4-MO-1fc" id="9MQ-9i-VXW"/>
@@ -103,6 +105,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="The House" image="home.png" id="u1e-5L-l1D"/>
                     <navigationItem key="navigationItem" title="The House" id="OXq-tk-BmO"/>
                     <connections>
@@ -121,6 +124,10 @@
         <scene sceneID="7My-rC-zs8">
             <objects>
                 <viewController storyboardIdentifier="imageGalleryTopViewController" id="Rwn-S9-ZuJ" customClass="ImageGalleryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nEf-Id-dB4"/>
+                        <viewControllerLayoutGuide type="bottom" id="3mP-yo-SFK"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9mQ-em-20u" customClass="KIImagePager">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,33 +176,33 @@
         <scene sceneID="kaW-Ee-k0M">
             <objects>
                 <tableViewController id="kZ0-5W-bpQ" customClass="BrothersViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IsG-Ez-1nK">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="IsG-Ez-1nK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BrotherCell" id="Eli-UW-xIq" customClass="BrotherCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eli-UW-xIq" id="20O-Wq-13D">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stephen Silber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cUL-R3-jWp">
-                                            <rect key="frame" x="20" y="2" width="202" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stephen Silber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUL-R3-jWp">
+                                            <rect key="frame" x="20" y="4" width="202" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Diego, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oDS-JW-4WM">
-                                            <rect key="frame" x="20" y="20" width="202" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="San Diego, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDS-JW-4WM">
+                                            <rect key="frame" x="20" y="24" width="202" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2014" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7ml-bu-UX3">
-                                            <rect key="frame" x="230" y="11" width="70" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2014" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ml-bu-UX3">
+                                            <rect key="frame" x="230" y="14" width="70" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                             <nil key="highlightedColor"/>
@@ -278,16 +285,20 @@
             </objects>
             <point key="canvasLocation" x="-231" y="889"/>
         </scene>
-        <!--Events View Controller-->
+        <!--Events View Controller - Events-->
         <scene sceneID="oMq-1O-2Ky">
             <objects>
                 <viewController id="U58-hT-SkX" customClass="EventsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IJl-fQ-dcr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cww-GH-x71"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="v9N-ir-3Zs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kg8-pw-7hy">
-                                <rect key="frame" x="0.0" y="227" width="320" height="341"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kg8-pw-7hy">
+                                <rect key="frame" x="0.0" y="274" width="320" height="230"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -295,15 +306,16 @@
                                     <outlet property="delegate" destination="U58-hT-SkX" id="FtV-vx-7ed"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" id="trL-lX-Sz6" customClass="CKCalendarView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="164"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trL-lX-Sz6" customClass="CKCalendarView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="275"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tTm-N3-K5X"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Events" id="tTm-N3-K5X"/>
                     <connections>
                         <outlet property="calendarView" destination="trL-lX-Sz6" id="4J7-sv-kMd"/>
                         <outlet property="tableView" destination="kg8-pw-7hy" id="Z8i-Fp-dtx"/>
@@ -313,7 +325,7 @@
             </objects>
             <point key="canvasLocation" x="199" y="889"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Table View Controller - Transportation-->
         <scene sceneID="hNb-4h-drz">
             <objects>
                 <tableViewController id="hfB-Ly-Y5A" sceneMemberID="viewController">
@@ -332,11 +344,11 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Ng9-es-fHZ"/>
+                    <navigationItem key="navigationItem" title="Transportation" id="Ng9-es-fHZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQH-QM-ysm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="199" y="1495"/>
+            <point key="canvasLocation" x="199" y="1543"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="84Z-Re-9KI">
@@ -344,6 +356,7 @@
                 <navigationController definesPresentationContext="YES" id="TP2-ye-2nV" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RkD-QI-JzQ">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.37926468250000001" green="0.16787116229999999" blue="0.55697941780000004" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="hfB-Ly-Y5A" kind="relationship" relationship="rootViewController" id="ZSD-u4-Nik"/>
@@ -351,7 +364,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c01-v5-Qt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226" y="1495"/>
+            <point key="canvasLocation" x="-231" y="1543"/>
         </scene>
     </scenes>
     <resources>

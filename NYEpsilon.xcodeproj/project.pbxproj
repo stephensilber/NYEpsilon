@@ -51,6 +51,7 @@
 		DC8FC9881846DCDB00B764A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC8FC9861846DCDB00B764A6 /* InfoPlist.strings */; };
 		DC8FC98A1846DCDB00B764A6 /* NYEpsilonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC9891846DCDB00B764A6 /* NYEpsilonTests.m */; };
 		DC8FC99F1846E11A00B764A6 /* NYEClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC99E1846E11A00B764A6 /* NYEClient.m */; };
+		DCB2B908185EB1D90068C0A9 /* A3ParallaxScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB2B907185EB1D90068C0A9 /* A3ParallaxScrollView.m */; };
 		DCCE6DF4184715190086F4DE /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE6DF3184715190086F4DE /* CKCalendarView.m */; };
 		DCCE6DF7184715970086F4DE /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE6DF6184715970086F4DE /* EventsViewController.m */; };
 /* End PBXBuildFile section */
@@ -114,6 +115,8 @@
 		DC8FC9891846DCDB00B764A6 /* NYEpsilonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYEpsilonTests.m; sourceTree = "<group>"; };
 		DC8FC99D1846E11A00B764A6 /* NYEClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYEClient.h; sourceTree = "<group>"; };
 		DC8FC99E1846E11A00B764A6 /* NYEClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYEClient.m; sourceTree = "<group>"; };
+		DCB2B906185EB1D90068C0A9 /* A3ParallaxScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A3ParallaxScrollView.h; sourceTree = "<group>"; };
+		DCB2B907185EB1D90068C0A9 /* A3ParallaxScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A3ParallaxScrollView.m; sourceTree = "<group>"; };
 		DCCE6DF2184715190086F4DE /* CKCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarView.h; sourceTree = "<group>"; };
 		DCCE6DF3184715190086F4DE /* CKCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarView.m; sourceTree = "<group>"; };
 		DCCE6DF5184715970086F4DE /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 		DC4AD6C51847009200F0365B /* Third Party Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DCB2B906185EB1D90068C0A9 /* A3ParallaxScrollView.h */,
+				DCB2B907185EB1D90068C0A9 /* A3ParallaxScrollView.m */,
 				DCCE6DF2184715190086F4DE /* CKCalendarView.h */,
 				DCCE6DF3184715190086F4DE /* CKCalendarView.m */,
 				DC4AD6BC1846FDFA00F0365B /* QMBParallaxScrollViewController.h */,
@@ -223,9 +228,9 @@
 				DC4AD6D31847031D00F0365B /* The House */,
 				DC4AD6C51847009200F0365B /* Third Party Classes */,
 				DC4AD69F1846F70100F0365B /* Icons */,
+				DC8FC96D1846DCDA00B764A6 /* Main.storyboard */,
 				DC8FC96A1846DCDA00B764A6 /* AppDelegate.h */,
 				DC8FC96B1846DCDA00B764A6 /* AppDelegate.m */,
-				DC8FC96D1846DCDA00B764A6 /* Main.storyboard */,
 				DC4AD6961846F35700F0365B /* BrotherCell.h */,
 				DC4AD6971846F35700F0365B /* BrotherCell.m */,
 				DC8FC9731846DCDA00B764A6 /* BrothersViewController.h */,
@@ -437,6 +442,7 @@
 				DC8FC9721846DCDA00B764A6 /* HouseViewController.m in Sources */,
 				DC4AD6981846F35700F0365B /* BrotherCell.m in Sources */,
 				DCCE6DF4184715190086F4DE /* CKCalendarView.m in Sources */,
+				DCB2B908185EB1D90068C0A9 /* A3ParallaxScrollView.m in Sources */,
 				DC8FC9681846DCDA00B764A6 /* main.m in Sources */,
 				DC4AD6D21847028A00F0365B /* HouseInformationTableViewController.m in Sources */,
 			);

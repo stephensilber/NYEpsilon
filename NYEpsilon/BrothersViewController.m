@@ -41,7 +41,8 @@
     
     // Default fetch request - Returns Actives
     [self fetchBrothersFromClass:nil];
-    [self.tableView setRowHeight:55];
+    [self.tableView setRowHeight:50];
+
 }
 
 - (void) fetchBrothersFromClass:(NSString *) class {
@@ -55,7 +56,7 @@
                                                                          NSLog(@"ERROR: %@", error);
                                                                      }
                                                                  }];
-//    [self.indicator setAnimatingWithStateOfTask:task];
+    NSLog(@"Task: %@", task);
 
 }
 

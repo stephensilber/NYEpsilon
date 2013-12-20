@@ -45,7 +45,6 @@
 
                                        if (httpResponse.statusCode == 200) {
                                            dispatch_async(dispatch_get_main_queue(), ^{
-                                               NSLog(@"Results: %@\n%@", [responseObject class], responseObject);
                                                completion(responseObject, nil);
                                            });
                                        } else {
@@ -89,6 +88,7 @@
                                            completion(nil, error);
                                        });
                                    }];
+    NSLog(@"Request: %@", task.originalRequest.URL);
     return task;
     
 }

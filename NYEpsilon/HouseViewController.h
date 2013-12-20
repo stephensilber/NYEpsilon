@@ -10,6 +10,6 @@
 #import "KIImagePager.h"
 
 
-@interface HouseViewController : UIViewController <KIImagePagerDataSource, KIImagePagerDelegate>
+@interface HouseViewController : UIViewController <KIImagePagerDataSource, KIImagePagerDelegate, UIScrollViewDelegate>
 
 @end

@@ -9,8 +9,10 @@
 #import "HouseViewController.h"
 #import "ImageGalleryViewController.h"
 #import "HouseInformationTableViewController.h"
+#import "A3ParallaxScrollView.h"
 
 @interface HouseViewController ()
+@property (nonatomic, strong) IBOutlet A3ParallaxScrollView *scrollWrapper;
 @property (nonatomic, strong) IBOutlet KIImagePager *imagePager;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *photos;
@@ -29,11 +31,58 @@
     [self.photos addObject:[UIImage imageNamed:@"house2.jpeg"]];
     [self.photos addObject:[UIImage imageNamed:@"house3.jpeg"]];
 
+    
     [super viewDidLoad];
+    // create ParallaxScrollView
+    self.scrollWrapper = [[A3ParallaxScrollView alloc] initWithFrame:self.view.bounds];
+    self.scrollWrapper.delegate = self;
+    [self.view addSubview:self.scrollWrapper];
+    CGSize contentSize = self.scrollWrapper.frame.size;
+    contentSize.height *= 1.2f;
+    self.scrollWrapper.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.scrollWrapper.contentSize = contentSize;
+    
+    // add header and content
+    CGRect headerFrame = self.imagePager.frame;
+    headerFrame.origin.y -= 122.0f;
+    self.imagePager.frame = headerFrame;
+    [self.scrollWrapper addSubview:self.imagePager withAcceleration:CGPointMake(0.0f, 0.5f)];
+    CGRect contentFrame = self.tableView.frame;
+    contentFrame.origin.y += 122.0f;
+    self.tableView.frame = contentFrame;
+    [self.scrollWrapper addSubview:self.tableView];
+    
+    // force the table to resize the content
+    [self.tableView reloadData];
+    
+    CGRect tableFrame = self.tableView.frame;
+    tableFrame.size.height = self.tableView.contentSize.height;
+    self.tableView.frame = tableFrame;
+    
+    // add the views to the scroll view instead
+    [self.scrollWrapper addSubview:self.imagePager];
+    [self.scrollWrapper addSubview:self.tableView];
+    
+    // set the content size
+    self.scrollWrapper.contentSize = CGSizeMake(self.scrollWrapper.frame.size.width,
+                                                  self.imagePager.frame.size.height +
+                                                  self.tableView.frame.size.height
+                                                  );
+    
+    [self.view addSubview:self.scrollWrapper];
+
     
     self.imagePager.slideshowTimeInterval = 5.0f;
     
     
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView == self.scrollWrapper) {
+        CGRect frame = self.scrollWrapper.frame;
+        frame.origin.y = scrollView.contentOffset.y;
+        self.scrollWrapper.frame = frame;
+    }
 }
 
 - (NSArray *) arrayWithImages

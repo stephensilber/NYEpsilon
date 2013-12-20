@@ -34,9 +34,9 @@
     if (self) {
         self.dateFormatter = [[NSDateFormatter alloc] init];
         [self.dateFormatter setDateFormat:@"dd/MM/yyyy"];
-        
+        self.calendarView.delegate = self;
         self.calendarView.onlyShowCurrentMonth = NO;
-        self.calendarView.adaptHeightToNumberOfWeeksInMonth = YES;
+        self.calendarView.adaptHeightToNumberOfWeeksInMonth = NO;
         self.minimumDate = [self.dateFormatter dateFromString:@"20/08/2013"];
         
     }
@@ -54,20 +54,21 @@
     
     NSURLSessionDataTask *task = [[NYEClient sharedClient] eventsFromMonth:startMonthString untilMonth:endMonthString completion:^(NSDictionary *results, NSError *error) {
         if (results) {
-            NSLog(@"RESULTS: %@\n%@", [results class], results);
+            NSLog(@"Downloaded %i events", results.count);
             self.monthEvents = results;
+            [self.calendarView reloadData];
             [self.tableView reloadData];
         } else {
             NSLog(@"ERROR: %@", error);
         }
     }];
+    NSLog(@"Task: %@", task);
    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.calendarView setDelegate:self];
     [self fetchEventsFromMonth:nil endingOnMonth:nil];
     
 }
@@ -101,10 +102,33 @@
 #pragma mark -
 #pragma mark - CKCalendarDelegate
 
+- (void)calendar:(CKCalendarView *)calendar didLayoutInRect:(CGRect)frame {
+    
+    CGRect calendarFrame = calendar.frame;
+    CGRect tableFrame = self.tableView.frame;
+    NSLog(@"Did layout");
+    
+    tableFrame.origin.y = calendar.bounds.size.height + 15;
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.1];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+    
+    self.calendarView.frame = calendarFrame;
+    self.tableView.frame = tableFrame;
+    
+    [UIView commitAnimations];
+    
+}
+
+- (void) calendar:(CKCalendarView*)calendar didChangeMonth:(NSDate *)date {
+    [self.calendarView setNeedsLayout];
+    NSLog(@"Needs layout");
+}
+
 - (void)calendar:(CKCalendarView *)calendar didSelectDate:(NSDate *)date {
     NSArray *day = [self fetchDayDataFromDate:date];
     self->dayData = (day) ? day : [NSArray array];
-    NSLog(@"Date selected: %c \n%@",  emptyFlag, dayData);
     [self.tableView reloadData];
 }
 
@@ -112,7 +136,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
     [formatter setDateFormat:@"yyyy-MM-dd"];
-    if([self.monthEvents objectForKey:[formatter stringFromDate:date]]) {
+    if ([self fetchDayDataFromDate:date]) {
         [dateItem setTextColor:[UIColor purpleColor]];
         [dateItem setBackgroundColor:[UIColor colorWithRed:0.884 green:0.896 blue:0.933 alpha:1.000]];
     }
