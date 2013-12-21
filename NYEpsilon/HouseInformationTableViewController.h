@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMBParallaxScrollViewController.h"
 
-@interface HouseInformationTableViewController : UIViewController<QMBParallaxScrollViewHolder, UITableViewDataSource, UITableViewDelegate>
+@interface HouseInformationTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;

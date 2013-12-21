@@ -9,7 +9,6 @@
 #import "HouseViewController.h"
 #import "ImageGalleryViewController.h"
 #import "HouseInformationTableViewController.h"
-#import "A3ParallaxScrollView.h"
 
 @interface HouseViewController ()
 @property (nonatomic, strong) IBOutlet KIImagePager *imagePager;
