@@ -61,19 +61,19 @@
     
     switch (indexPath.row) {
         case 0:
-            cell.imageView.image = [UIImage imageNamed:@"music.png"];
+//            cell.imageView.image = [UIImage imageNamed:@"music.png"];
             cell.textLabel.text = @"SAE Songs";
             break;
         case 1:
-            cell.imageView.image = [UIImage imageNamed:@"facebook.png"];
+//            cell.imageView.image = [UIImage imageNamed:@"facebook.png"];
             cell.textLabel.text = @"Facebook";
             break;
         case 2:
-            cell.imageView.image = [UIImage imageNamed:@"twitter.png"];
+//            cell.imageView.image = [UIImage imageNamed:@"twitter.png"];
             cell.textLabel.text = @"Twitter";
             break;
         case 3:
-            cell.imageView.image = [UIImage imageNamed:@"globe.png"];
+//            cell.imageView.image = [UIImage imageNamed:@"globe.png"];
             cell.textLabel.text = @"Webpage";
             break;
         default:

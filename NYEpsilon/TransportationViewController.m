@@ -34,7 +34,7 @@
 
 - (void) fetchBusSchedule:(NSString *)route_url {
     NSInteger currentTime = round([[NSDate date] timeIntervalSince1970]);
-    NSString *urlString = [NSString stringWithFormat:@"%@%i", route_url, currentTime];
+    NSString *urlString = [NSString stringWithFormat:@"%@%li", route_url, (long)currentTime];
     NSLog(@"Request URL: %@", urlString);
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -49,7 +49,7 @@
         for (NSDictionary *route in [responseObject objectForKey:@"routes"]) {
             [self.routes addObject:route];
         }
-        NSLog(@"Adding %i routes!", self.routes.count);
+        NSLog(@"Adding %lu routes!", (unsigned long)self.routes.count);
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // Request raised an error and reset activity indicator to refresh button
@@ -99,7 +99,7 @@
     NSDictionary *route = [self.routes objectAtIndex:indexPath.row];
     cell.durationLabel.text = [[[[route objectForKey:@"legs"] firstObject] objectForKey:@"duration"] objectForKey:@"text"];
     cell.distanceLabel.text = [[[[route objectForKey:@"legs"] firstObject] objectForKey:@"distance"] objectForKey:@"text"];
-    cell.numStepsLabel.text = [NSString stringWithFormat:@"%i steps", [[[[route objectForKey:@"legs"] firstObject] objectForKey:@"steps"] count]];
+    cell.numStepsLabel.text = [NSString stringWithFormat:@"%lu steps", (unsigned long)[[[[route objectForKey:@"legs"] firstObject] objectForKey:@"steps"] count]];
     
     return cell;
     

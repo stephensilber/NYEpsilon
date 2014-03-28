@@ -189,7 +189,7 @@
             [_scrollView addSubview:imageView];
         }
         
-        [_countLabel setText:[NSString stringWithFormat:@"%d", [[_dataSource arrayWithImages] count]]];
+        [_countLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)[[_dataSource arrayWithImages] count]]];
         _pageControl.numberOfPages = [(NSArray *)[_dataSource arrayWithImages] count];
         _pageControl.hidden = ([(NSArray *)[_dataSource arrayWithImages] count] > 0?NO:YES);
     } else {

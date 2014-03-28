@@ -52,7 +52,7 @@
                                                completion(nil, nil);
                                            });
                                            NSLog(@"Received: %@", responseObject);
-                                           NSLog(@"Received HTTP %d", httpResponse.statusCode);
+                                           NSLog(@"Received HTTP %ld", (long)httpResponse.statusCode);
                                        }
                                    } failure:^(NSURLSessionDataTask *task, NSError *error) {
                                        dispatch_async(dispatch_get_main_queue(), ^{
@@ -81,7 +81,7 @@
                                                completion(nil, nil);
                                            });
                                            NSLog(@"Received: %@", responseObject);
-                                           NSLog(@"Received HTTP %d", httpResponse.statusCode);
+                                           NSLog(@"Received HTTP %ld", (long)httpResponse.statusCode);
                                        }
                                    } failure:^(NSURLSessionDataTask *task, NSError *error) {
                                        dispatch_async(dispatch_get_main_queue(), ^{

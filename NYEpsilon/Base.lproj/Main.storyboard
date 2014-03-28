@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--House View Controller - First-->
@@ -16,78 +17,31 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="M0T-zu-bTo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="M0T-zu-bTo">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <sections>
-                                    <tableViewSection headerTitle="Our House" id="Z5D-V0-Mdr">
-                                        <cells>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OurHouseCell" textLabel="SQF-kp-wvS" rowHeight="284" style="IBUITableViewCellStyleDefault" id="7SK-wn-2W5">
-                                                <rect key="frame" x="0.0" y="55" width="320" height="284"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7SK-wn-2W5" id="y2A-1w-CBI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="houseCell" textLabel="SQF-kp-wvS" rowHeight="284" style="IBUITableViewCellStyleDefault" id="7SK-wn-2W5">
+                                        <rect key="frame" x="0.0" y="55" width="320" height="284"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7SK-wn-2W5" id="y2A-1w-CBI">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="SQF-kp-wvS">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="283"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="SQF-kp-wvS">
-                                                            <rect key="frame" x="15" y="0.0" width="290" height="283"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <string key="text">The chapter house, located on 12 Myrtle Avenue, is a early 19th century mansion bought from a rich farmer in 1961. Although the house is historic, the Brotherhood makes a big effort to constantly enhance the quality of living for the brothers as well as the experience of visiting guests, friends, neighbors and alumni. Each semester the House Manager holds workdays, during which the brothers participate in cleaning, masonry, carpentry, landcaping, electrical and aesthetic projects to improve the house. Pasts projects include refinishing the wood floors, building brick flower boxes for the front of the house, laying new brick walkways, and painting a large Sigma Alpha Epsilon crest in the entrance to the basement.</string>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </cells>
-                                    </tableViewSection>
-                                    <tableViewSection headerTitle="Chapter History" id="E8x-Wv-6fc">
-                                        <cells>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChapterHistoryCell" textLabel="7vS-mT-Rg3" rowHeight="270" style="IBUITableViewCellStyleDefault" id="NdH-nY-S0m">
-                                                <rect key="frame" x="0.0" y="387" width="320" height="270"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NdH-nY-S0m" id="8Tm-JL-BBT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="7vS-mT-Rg3">
-                                                            <rect key="frame" x="15" y="0.0" width="290" height="269"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <string key="text">The New York Epsilon chapter of Sigma Alpha Epsilon began as a local chapter in 1948, known as Lambda Alpha Epsilon (now the name of our housing corporation). On December 8, 1951, Lambda Alpha Epsilon was installed as the New York Epsilon chapter of Sigma Alpha Epsilon, by one of Sigma Alpha Epsilon's finest and most recognized alumni, John O. Moseley. We received the designation 'Epsilon' in recognition of the founder of the chapter, Forrest K. English class of 1951 (a transfer student from Penn Theta). His letter to ΣAE national regarding the founding of a chapter here is displayed to this day in our chapter room.</string>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </cells>
-                                    </tableViewSection>
-                                    <tableViewSection headerTitle="National History" id="uzY-Zu-6Zm">
-                                        <cells>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NationalHistoryCell" textLabel="wbY-nt-sFy" rowHeight="528" style="IBUITableViewCellStyleDefault" id="q4m-hg-jI2">
-                                                <rect key="frame" x="0.0" y="705" width="320" height="528"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q4m-hg-jI2" id="uTd-QI-lhn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="527"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="wbY-nt-sFy">
-                                                            <rect key="frame" x="15" y="0.0" width="290" height="527"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <string key="text">On March 9, 1856 Sigma Alpha Epsilon was founded by eight students at the University of Alabama at Tuscaloosa. These eight founding fathers, studying in the classics, formed a fraternity governed by age old Greek principles and the highest standards for entrance. Our brothers fought on both sides of the civil war, and many chapters were lost. In fact, only one chapter stayed active throughout the entire civil war, Washington City Rho at Washington Military Academy. Many other chapters were revived after the war, including the famous Kentucky Chi, where before the war; a woman was entrusted with the sacred documents that govern Sigma Alpha Epsilon. Lucie Pattie was given the handshake by a brother of that chapter (who died in the war) and was not to release the documents to any other person until that sacred greeting was given. When a different brother returned and shook Miss Pattie's hand, the documents were received and the chapter was revived! Over the summer of 1925, the national convention spawned the idea of the first and only fraternal leadership school. Through the great depression, amazingly, not a single chapter went under. In this century of prosperity for Sigma Alpha Epsilon, we have grown to over 220 chapters with approximately 11,000 current undergraduates. In total there are over 300,000 initiated brothers of Sigma Alpha Epsilon.</string>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </cells>
-                                    </tableViewSection>
-                                </sections>
+                                                    <string key="text">The chapter house, located on 12 Myrtle Avenue, is a early 19th century mansion bought from a rich farmer in 1961. Although the house is historic, the Brotherhood makes a big effort to constantly enhance the quality of living for the brothers as well as the experience of visiting guests, friends, neighbors and alumni. Each semester the House Manager holds workdays, during which the brothers participate in cleaning, masonry, carpentry, landcaping, electrical and aesthetic projects to improve the house. Pasts projects include refinishing the wood floors, building brick flower boxes for the front of the house, laying new brick walkways, and painting a large Sigma Alpha Epsilon crest in the entrance to the basement.</string>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="CZ4-MO-1fc" id="YHW-fr-sPN"/>
                                     <outlet property="delegate" destination="CZ4-MO-1fc" id="0Iv-gl-mqe"/>
@@ -100,9 +54,6 @@
                     <tabBarItem key="tabBarItem" title="The House" image="home.png" id="u1e-5L-l1D"/>
                     <navigationItem key="navigationItem" title="The House" id="OXq-tk-BmO"/>
                     <connections>
-                        <outlet property="chapterHistoryCell" destination="NdH-nY-S0m" id="4LU-Kc-cBO"/>
-                        <outlet property="nationalHistoryCell" destination="q4m-hg-jI2" id="aT7-DE-CVL"/>
-                        <outlet property="ourHouseCell" destination="7SK-wn-2W5" id="pOF-5h-ms7"/>
                         <outlet property="tableView" destination="M0T-zu-bTo" id="op5-TA-PKg"/>
                     </connections>
                 </viewController>
@@ -129,6 +80,7 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="300"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8O-Rm-tCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -346,17 +298,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Pd2-4L-B6M" style="IBUITableViewCellStyleDefault" id="dgS-Ok-mjJ">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Pd2-4L-B6M" rowHeight="38" style="IBUITableViewCellStyleDefault" id="dgS-Ok-mjJ">
+                                <rect key="frame" x="0.0" y="86" width="320" height="38"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dgS-Ok-mjJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dgS-Ok-mjJ" id="pS0-GH-qWk">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pd2-4L-B6M">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="290" height="37"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -395,7 +347,7 @@
             </objects>
             <point key="canvasLocation" x="-231" y="2242"/>
         </scene>
-        <!--Transportation View Controller - Transportation-->
+        <!--Transportation View Controller-->
         <scene sceneID="Ecg-0d-XQ7">
             <objects>
                 <viewController id="CyI-yt-Yv4" customClass="TransportationViewController" sceneMemberID="viewController">
@@ -444,7 +396,17 @@
                             <outlet property="delegate" destination="CyI-yt-Yv4" id="EdG-MF-CBD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Transportation" id="kkA-Ar-oiP"/>
+                    <navigationItem key="navigationItem" id="kkA-Ar-oiP">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="4Hh-FI-3Wo">
+                            <rect key="frame" x="96" y="7" width="128" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Drivers"/>
+                                <segment title="Bus"/>
+                            </segments>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="oRC-iV-ysL" id="fKG-yK-C9m"/>
                     </connections>

@@ -9,9 +9,6 @@
 #import "HouseInformationTableViewController.h"
 
 @interface HouseInformationTableViewController ()
-@property (nonatomic, strong) IBOutlet UITableViewCell *ourHouseCell;
-@property (nonatomic, strong) IBOutlet UITableViewCell *chapterHistoryCell;
-@property (nonatomic, strong) IBOutlet UITableViewCell *nationalHistoryCell;
 
 @end
 
@@ -25,18 +22,10 @@
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
 
     [self setNeedsStatusBarAppearanceUpdate];
-    
-    [self.tableView reloadData];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -56,31 +45,28 @@
     switch (indexPath.section) {
         case 0:
             return 283.0f;
-            break;
         case 1:
             return 290.0f;
-            break;
         case 2:
             return 528.0f;
-            break;
         default:
             return 44.0f;
-            break;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    
     switch (indexPath.section) {
         case 0:
-            cell = self.ourHouseCell;
+            cell.textLabel.text = @"The chapter house, located on 12 Myrtle Avenue, is a early 19th century mansion bought from a rich farmer in 1961. Although the house is historic, the Brotherhood makes a big effort to constantly enhance the quality of living for the brothers as well as the experience of visiting guests, friends, neighbors and alumni. Each semester the House Manager holds workdays, during which the brothers participate in cleaning, masonry, carpentry, landcaping, electrical and aesthetic projects to improve the house. Pasts projects include refinishing the wood floors, building brick flower boxes for the front of the house, laying new brick walkways, and painting a large Sigma Alpha Epsilon crest in the entrance to the basement.";
             break;
         case 1:
-            cell = self.chapterHistoryCell;
+            cell.textLabel.text = @"The New York Epsilon chapter of Sigma Alpha Epsilon began as a local chapter in 1948, known as Lambda Alpha Epsilon (now the name of our housing corporation). On December 8, 1951, Lambda Alpha Epsilon was installed as the New York Epsilon chapter of Sigma Alpha Epsilon, by one of Sigma Alpha Epsilon's finest and most recognized alumni, John O. Moseley. We received the designation 'Epsilon' in recognition of the founder of the chapter, Forrest K. English class of 1951 (a transfer student from Penn Theta). His letter to ΣAE national regarding the founding of a chapter here is displayed to this day in our chapter room.";
             break;
         case 2:
-            cell = self.nationalHistoryCell;
+            cell.textLabel.text = @"On March 9, 1856 Sigma Alpha Epsilon was founded by eight students at the University of Alabama at Tuscaloosa. These eight founding fathers, studying in the classics, formed a fraternity governed by age old Greek principles and the highest standards for entrance. Our brothers fought on both sides of the civil war, and many chapters were lost. In fact, only one chapter stayed active throughout the entire civil war, Washington City Rho at Washington Military Academy. Many other chapters were revived after the war, including the famous Kentucky Chi, where before the war; a woman was entrusted with the sacred documents that govern Sigma Alpha Epsilon. Lucie Pattie was given the handshake by a brother of that chapter (who died in the war) and was not to release the documents to any other person until that sacred greeting was given. When a different brother returned and shook Miss Pattie's hand, the documents were received and the chapter was revived! Over the summer of 1925, the national convention spawned the idea of the first and only fraternal leadership school. Through the great depression, amazingly, not a single chapter went under. In this century of prosperity for Sigma Alpha Epsilon, we have grown to over 220 chapters with approximately 11,000 current undergraduates. In total there are over 300,000 initiated brothers of Sigma Alpha Epsilon.";
             break;
         default:
             break;
@@ -108,60 +94,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-/*
- #pragma mark - Navigation
- 
- // In a story board-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- 
- */
 
 - (UIScrollView *)scrollViewForParallexController{
     return self.tableView;

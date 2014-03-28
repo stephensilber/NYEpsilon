@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     UITabBarItem *item1 = self.tabBarController.tabBar.items[0];
     item1.image = [[UIImage imageNamed:@"home_sel.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item1.selectedImage = [UIImage imageNamed:@"home.png"];

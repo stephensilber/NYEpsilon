@@ -50,7 +50,7 @@
     
     NSURLSessionDataTask *task = [[NYEClient sharedClient] eventsFromMonth:startMonthString untilMonth:endMonthString completion:^(NSDictionary *results, NSError *error) {
         if (results) {
-            NSLog(@"Downloaded %i events", results.count);
+            NSLog(@"Downloaded %lu events", (unsigned long)results.count);
             self.monthEvents = results;
             [self.calendarView reloadData];
             [self.tableView reloadData];

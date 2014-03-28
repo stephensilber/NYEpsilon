@@ -43,6 +43,7 @@
     [self fetchBrothersFromClass:nil];
     [self.tableView setRowHeight:50];
 
+
 }
 
 - (void) fetchBrothersFromClass:(NSString *) class {
@@ -50,7 +51,7 @@
     NSURLSessionDataTask *task = [[NYEClient sharedClient] brothersFromClass:class completion:^(NSArray *results, NSError *error) {
                                                                      if (results) {
                                                                          self.brothers = results;
-                                                                         NSLog(@"Successfully downloaded %i brothers", self.brothers.count);
+                                                                         NSLog(@"Successfully downloaded %lu brothers", (unsigned long)self.brothers.count);
                                                                          [self.tableView reloadData];
                                                                      } else {
                                                                          NSLog(@"ERROR: %@", error);
