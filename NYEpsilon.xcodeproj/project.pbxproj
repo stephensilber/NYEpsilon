@@ -45,6 +45,8 @@
 		DC8FC9881846DCDB00B764A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC8FC9861846DCDB00B764A6 /* InfoPlist.strings */; };
 		DC8FC98A1846DCDB00B764A6 /* NYEpsilonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC9891846DCDB00B764A6 /* NYEpsilonTests.m */; };
 		DC8FC99F1846E11A00B764A6 /* NYEClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC99E1846E11A00B764A6 /* NYEClient.m */; };
+		DC941C9818E5B48F008DBF74 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC941C9718E5B48F008DBF74 /* CoreData.framework */; };
+		DC941C9B18E5B4CA008DBF74 /* NYEpsilon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC941C9918E5B4CA008DBF74 /* NYEpsilon.xcdatamodeld */; };
 		DCCE6DF4184715190086F4DE /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE6DF3184715190086F4DE /* CKCalendarView.m */; };
 		DCCE6DF7184715970086F4DE /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE6DF6184715970086F4DE /* EventsViewController.m */; };
 		DCFC90C018650C1E0027F401 /* TransportationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFC90BF18650C1E0027F401 /* TransportationViewController.m */; };
@@ -124,6 +126,8 @@
 		DC8FC9891846DCDB00B764A6 /* NYEpsilonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYEpsilonTests.m; sourceTree = "<group>"; };
 		DC8FC99D1846E11A00B764A6 /* NYEClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYEClient.h; sourceTree = "<group>"; };
 		DC8FC99E1846E11A00B764A6 /* NYEClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYEClient.m; sourceTree = "<group>"; };
+		DC941C9718E5B48F008DBF74 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DC941C9A18E5B4CA008DBF74 /* NYEpsilon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NYEpsilon.xcdatamodel; sourceTree = "<group>"; };
 		DCCE6DF2184715190086F4DE /* CKCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarView.h; sourceTree = "<group>"; };
 		DCCE6DF3184715190086F4DE /* CKCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarView.m; sourceTree = "<group>"; };
 		DCCE6DF5184715970086F4DE /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC941C9818E5B48F008DBF74 /* CoreData.framework in Frameworks */,
 				DC8FC95E1846DCDA00B764A6 /* CoreGraphics.framework in Frameworks */,
 				DC8FC9601846DCDA00B764A6 /* UIKit.framework in Frameworks */,
 				DC8FC95C1846DCDA00B764A6 /* Foundation.framework in Frameworks */,
@@ -261,6 +266,7 @@
 		DC8FC95A1846DCDA00B764A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC941C9718E5B48F008DBF74 /* CoreData.framework */,
 				DC8FC95B1846DCDA00B764A6 /* Foundation.framework */,
 				DC8FC95D1846DCDA00B764A6 /* CoreGraphics.framework */,
 				DC8FC95F1846DCDA00B764A6 /* UIKit.framework */,
@@ -309,6 +315,7 @@
 				DC8FC9641846DCDA00B764A6 /* InfoPlist.strings */,
 				DC8FC9671846DCDA00B764A6 /* main.m */,
 				DC8FC9691846DCDA00B764A6 /* NYEpsilon-Prefix.pch */,
+				DC941C9918E5B4CA008DBF74 /* NYEpsilon.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -517,6 +524,7 @@
 				DCFC90C6186518F10027F401 /* TransportationRouteViewController.m in Sources */,
 				DC8FC99F1846E11A00B764A6 /* NYEClient.m in Sources */,
 				DCFC910A186577560027F401 /* MenuViewController.m in Sources */,
+				DC941C9B18E5B4CA008DBF74 /* NYEpsilon.xcdatamodeld in Sources */,
 				DCFC90C018650C1E0027F401 /* TransportationViewController.m in Sources */,
 				DC8FC9751846DCDA00B764A6 /* BrothersViewController.m in Sources */,
 				DC8FC96C1846DCDA00B764A6 /* AppDelegate.m in Sources */,
@@ -777,6 +785,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC941C9918E5B4CA008DBF74 /* NYEpsilon.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC941C9A18E5B4CA008DBF74 /* NYEpsilon.xcdatamodel */,
+			);
+			currentVersion = DC941C9A18E5B4CA008DBF74 /* NYEpsilon.xcdatamodel */;
+			path = NYEpsilon.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DC8FC9501846DCDA00B764A6 /* Project object */;
 }
