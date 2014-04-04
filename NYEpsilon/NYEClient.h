@@ -12,6 +12,7 @@
 @interface NYEClient : AFHTTPSessionManager
 
 + (NYEClient *)sharedClient;
+- (NSURLSessionDataTask *)brothersGivingRides:(BOOL) party completion:(void (^)(NSArray *results, NSError *error) )completion;
 - (NSURLSessionDataTask *)brothersFromClass:(NSString *)class completion:( void (^)(NSArray *results, NSError *error) )completion;
 - (NSURLSessionDataTask *)eventsFromMonth:(NSString *)startMonth untilMonth:(NSString *)endMonth completion:( void (^)(NSDictionary *results, NSError *error) )completion;
 

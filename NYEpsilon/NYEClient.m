@@ -17,7 +17,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSURL *baseURL = [NSURL URLWithString:@"http://nyepsilon.herokuapp.com/api/"];
-        
+//        NSURL *baseURL = [NSURL URLWithString:@"http://localhost:3000/api/"];
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
         [config setHTTPAdditionalHeaders:@{ @"User-Agent" : @"NYE iOS 2.0"}];
         
@@ -63,9 +63,36 @@
     return task;
 }
 
+- (NSURLSessionDataTask *)brothersGivingRides:(BOOL) party completion:(void (^)(NSArray *results, NSError *error) )completion {
+    NSURLSessionDataTask *task = [self GET:@"rides"
+                                parameters:nil
+                                   success:^(NSURLSessionDataTask *task, id responseObject) {
+                                       NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)task.response;
+                                       if (httpResponse.statusCode == 200) {
+                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                               completion(responseObject, nil);
+                                           });
+                                       } else {
+                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                               completion(nil, nil);
+                                           });
+                                           NSLog(@"Received: %@", responseObject);
+                                           NSLog(@"Received HTTP %ld", (long)httpResponse.statusCode);
+                                       }
+                                   } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                                       dispatch_async(dispatch_get_main_queue(), ^{
+                                           completion(nil, error);
+                                       });
+                                   }];
+    NSLog(@"Request: %@", task.originalRequest.URL);
+    return task;
+
+}
+
 - (NSURLSessionDataTask *)brothersFromClass:(NSString *)class completion:( void (^)(NSArray *results, NSError *error) )completion {
     
-    /* Option for searching for individual classes - DEFAULT: Actives */
+    /* Option for searching for individual classes - DEFAULT: Actives
+        This functionality will be expanded in v2.1 */
     if(!class) class = @"active";
     
     NSURLSessionDataTask *task = [self GET:@"brothers"
