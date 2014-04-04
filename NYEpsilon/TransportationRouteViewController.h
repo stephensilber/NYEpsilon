@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleMaps/GoogleMaps.h>
 
-@interface TransportationRouteViewController : UITableViewController
-
-@property (nonatomic, strong) NSDictionary *routeInfo;
-
+@interface TransportationRouteViewController : UITableViewController <GMSMapViewDelegate>
+@property (nonatomic, strong) TravelRoute *route;
 @end
