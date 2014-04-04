@@ -10,7 +10,7 @@
 #import "ImageGalleryViewController.h"
 #import "HouseInformationTableViewController.h"
 
-@interface HouseViewController ()
+@interface HouseViewController () <UIScrollViewDelegate>
 @property (nonatomic, strong) IBOutlet KIImagePager *imagePager;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *photos;
@@ -38,8 +38,6 @@
     [self.tableView reloadData];
 
     self.imagePager.slideshowTimeInterval = 5.0f;
-    
-    
 }
 
 - (NSArray *) arrayWithImages
@@ -52,6 +50,14 @@
     return UIViewContentModeScaleAspectFill;
 }
 
+#pragma mark - UIScrollView delegate
+
+- (void) scrollViewDidScroll:(UIScrollView *)scrollView {
+    // Keep tableview from scrolling down
+    if(scrollView.contentOffset.y < -64.0f) {
+        scrollView.contentOffset = CGPointMake(scrollView.contentOffset.x, -64.0f);
+    }
+}
 
 #pragma mark - Table view data source
 

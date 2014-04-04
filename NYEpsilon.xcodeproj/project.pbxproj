@@ -22,6 +22,12 @@
 
 /* Begin PBXBuildFile section */
 		50DFE3D3409C427094ED9EBE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F08D68B12A364CA3BF17CAA4 /* libPods.a */; };
+		DC032A0118EE730B007D7002 /* walking@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC0329FF18EE730B007D7002 /* walking@2x.png */; };
+		DC032A0218EE730B007D7002 /* bus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC032A0018EE730B007D7002 /* bus@2x.png */; };
+		DC032A0518EE85E8007D7002 /* TransitDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC032A0418EE85E8007D7002 /* TransitDetailCell.m */; };
+		DC032A0818EE8600007D7002 /* WalkingDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC032A0718EE8600007D7002 /* WalkingDetailCell.m */; };
+		DC032A0B18EEED63007D7002 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = DC032A0A18EEED63007D7002 /* NSString+HTML.m */; };
+		DC032A0E18EEEDF0007D7002 /* GTMNString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = DC032A0D18EEEDF0007D7002 /* GTMNString+HTML.m */; };
 		DC4AD6981846F35700F0365B /* BrotherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4AD6971846F35700F0365B /* BrotherCell.m */; };
 		DC4AD6C9184700DC00F0365B /* ImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4AD6C8184700DC00F0365B /* ImageGalleryViewController.m */; };
 		DC4AD6CD1847013200F0365B /* house.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DC4AD6CA1847013200F0365B /* house.jpeg */; };
@@ -47,10 +53,24 @@
 		DC8FC99F1846E11A00B764A6 /* NYEClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8FC99E1846E11A00B764A6 /* NYEClient.m */; };
 		DC941C9818E5B48F008DBF74 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC941C9718E5B48F008DBF74 /* CoreData.framework */; };
 		DC941C9B18E5B4CA008DBF74 /* NYEpsilon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC941C9918E5B4CA008DBF74 /* NYEpsilon.xcdatamodeld */; };
+		DC941CA118E5BE00008DBF74 /* Brother.m in Sources */ = {isa = PBXBuildFile; fileRef = DC941CA018E5BE00008DBF74 /* Brother.m */; };
+		DCC654FE18ECE5D500BE8C29 /* EventDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC654FD18ECE5D500BE8C29 /* EventDetailTableViewCell.m */; };
+		DCC6550118ECEB4A00BE8C29 /* event_duration@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC654FF18ECEB4A00BE8C29 /* event_duration@2x.png */; };
+		DCC6550218ECEB4A00BE8C29 /* event_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC6550018ECEB4A00BE8C29 /* event_location@2x.png */; };
 		DCCE6DF4184715190086F4DE /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE6DF3184715190086F4DE /* CKCalendarView.m */; };
 		DCCE6DF7184715970086F4DE /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE6DF6184715970086F4DE /* EventsViewController.m */; };
+		DCDE8F5418ED0B69001AAB4B /* TransportationRideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE8F5318ED0B69001AAB4B /* TransportationRideCell.m */; };
+		DCDE8F5718ED11F9001AAB4B /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE8F5618ED11F9001AAB4B /* UIImage+Tint.m */; };
+		DCDE8F5918ED16BD001AAB4B /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCDE8F5818ED16BD001AAB4B /* arrow_left@2x.png */; };
+		DCDE8F5B18ED1AEF001AAB4B /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCDE8F5A18ED1AEF001AAB4B /* pop.mp3 */; };
+		DCDE8F5E18ED1DAB001AAB4B /* NYETransportationClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE8F5D18ED1DAB001AAB4B /* NYETransportationClient.m */; };
+		DCDE8F6118ED2AA8001AAB4B /* TransportationPublicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE8F6018ED2AA8001AAB4B /* TransportationPublicCell.m */; };
+		DCDE8F6718EDD111001AAB4B /* TravelRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE8F6618EDD111001AAB4B /* TravelRoute.m */; };
+		DCDE8F6A18EDD11D001AAB4B /* RouteStep.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE8F6918EDD11D001AAB4B /* RouteStep.m */; };
+		DCDE8F6D18EDD128001AAB4B /* TransitStep.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE8F6C18EDD128001AAB4B /* TransitStep.m */; };
+		DCDE8F7018EDD12E001AAB4B /* WalkingStep.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE8F6F18EDD12E001AAB4B /* WalkingStep.m */; };
+		DCF3C25A18E62F0800819372 /* phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF3C25918E62F0800819372 /* phone@2x.png */; };
 		DCFC90C018650C1E0027F401 /* TransportationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFC90BF18650C1E0027F401 /* TransportationViewController.m */; };
-		DCFC90C3186515230027F401 /* TransportCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFC90C2186515230027F401 /* TransportCell.m */; };
 		DCFC90C6186518F10027F401 /* TransportationRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFC90C5186518F10027F401 /* TransportationRouteViewController.m */; };
 		DCFC90CD18652A4E0027F401 /* NSString+stripHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFC90CC18652A4E0027F401 /* NSString+stripHTML.m */; };
 		DCFC90D5186570B10027F401 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFC90D4186570B10027F401 /* MainTabBarViewController.m */; };
@@ -93,6 +113,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC0329FF18EE730B007D7002 /* walking@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "walking@2x.png"; sourceTree = "<group>"; };
+		DC032A0018EE730B007D7002 /* bus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus@2x.png"; sourceTree = "<group>"; };
+		DC032A0318EE85E8007D7002 /* TransitDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitDetailCell.h; sourceTree = "<group>"; };
+		DC032A0418EE85E8007D7002 /* TransitDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitDetailCell.m; sourceTree = "<group>"; };
+		DC032A0618EE8600007D7002 /* WalkingDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkingDetailCell.h; sourceTree = "<group>"; };
+		DC032A0718EE8600007D7002 /* WalkingDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkingDetailCell.m; sourceTree = "<group>"; };
+		DC032A0918EEED63007D7002 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		DC032A0A18EEED63007D7002 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		DC032A0C18EEEDF0007D7002 /* GTMNString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNString+HTML.h"; sourceTree = "<group>"; };
+		DC032A0D18EEEDF0007D7002 /* GTMNString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNString+HTML.m"; sourceTree = "<group>"; };
 		DC4AD6961846F35700F0365B /* BrotherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrotherCell.h; sourceTree = "<group>"; };
 		DC4AD6971846F35700F0365B /* BrotherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrotherCell.m; sourceTree = "<group>"; };
 		DC4AD6C7184700DC00F0365B /* ImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGalleryViewController.h; sourceTree = "<group>"; };
@@ -128,14 +158,37 @@
 		DC8FC99E1846E11A00B764A6 /* NYEClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYEClient.m; sourceTree = "<group>"; };
 		DC941C9718E5B48F008DBF74 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DC941C9A18E5B4CA008DBF74 /* NYEpsilon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NYEpsilon.xcdatamodel; sourceTree = "<group>"; };
+		DC941C9F18E5BE00008DBF74 /* Brother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Brother.h; path = Models/Brother.h; sourceTree = "<group>"; };
+		DC941CA018E5BE00008DBF74 /* Brother.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Brother.m; path = Models/Brother.m; sourceTree = "<group>"; };
+		DCC654FC18ECE5D500BE8C29 /* EventDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailTableViewCell.h; sourceTree = "<group>"; };
+		DCC654FD18ECE5D500BE8C29 /* EventDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailTableViewCell.m; sourceTree = "<group>"; };
+		DCC654FF18ECEB4A00BE8C29 /* event_duration@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "event_duration@2x.png"; sourceTree = "<group>"; };
+		DCC6550018ECEB4A00BE8C29 /* event_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "event_location@2x.png"; sourceTree = "<group>"; };
 		DCCE6DF2184715190086F4DE /* CKCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarView.h; sourceTree = "<group>"; };
 		DCCE6DF3184715190086F4DE /* CKCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarView.m; sourceTree = "<group>"; };
 		DCCE6DF5184715970086F4DE /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		DCCE6DF6184715970086F4DE /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		DCDE8F5218ED0B69001AAB4B /* TransportationRideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportationRideCell.h; sourceTree = "<group>"; };
+		DCDE8F5318ED0B69001AAB4B /* TransportationRideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportationRideCell.m; sourceTree = "<group>"; };
+		DCDE8F5518ED11F9001AAB4B /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		DCDE8F5618ED11F9001AAB4B /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
+		DCDE8F5818ED16BD001AAB4B /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@2x.png"; sourceTree = "<group>"; };
+		DCDE8F5A18ED1AEF001AAB4B /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
+		DCDE8F5C18ED1DAB001AAB4B /* NYETransportationClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYETransportationClient.h; sourceTree = "<group>"; };
+		DCDE8F5D18ED1DAB001AAB4B /* NYETransportationClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYETransportationClient.m; sourceTree = "<group>"; };
+		DCDE8F5F18ED2AA8001AAB4B /* TransportationPublicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportationPublicCell.h; sourceTree = "<group>"; };
+		DCDE8F6018ED2AA8001AAB4B /* TransportationPublicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportationPublicCell.m; sourceTree = "<group>"; };
+		DCDE8F6518EDD111001AAB4B /* TravelRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelRoute.h; sourceTree = "<group>"; };
+		DCDE8F6618EDD111001AAB4B /* TravelRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelRoute.m; sourceTree = "<group>"; };
+		DCDE8F6818EDD11D001AAB4B /* RouteStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteStep.h; sourceTree = "<group>"; };
+		DCDE8F6918EDD11D001AAB4B /* RouteStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteStep.m; sourceTree = "<group>"; };
+		DCDE8F6B18EDD128001AAB4B /* TransitStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitStep.h; sourceTree = "<group>"; };
+		DCDE8F6C18EDD128001AAB4B /* TransitStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitStep.m; sourceTree = "<group>"; };
+		DCDE8F6E18EDD12E001AAB4B /* WalkingStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkingStep.h; sourceTree = "<group>"; };
+		DCDE8F6F18EDD12E001AAB4B /* WalkingStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkingStep.m; sourceTree = "<group>"; };
+		DCF3C25918E62F0800819372 /* phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone@2x.png"; sourceTree = "<group>"; };
 		DCFC90BE18650C1E0027F401 /* TransportationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportationViewController.h; sourceTree = "<group>"; };
 		DCFC90BF18650C1E0027F401 /* TransportationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportationViewController.m; sourceTree = "<group>"; };
-		DCFC90C1186515230027F401 /* TransportCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportCell.h; sourceTree = "<group>"; };
-		DCFC90C2186515230027F401 /* TransportCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportCell.m; sourceTree = "<group>"; };
 		DCFC90C4186518F10027F401 /* TransportationRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportationRouteViewController.h; sourceTree = "<group>"; };
 		DCFC90C5186518F10027F401 /* TransportationRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportationRouteViewController.m; sourceTree = "<group>"; };
 		DCFC90CB18652A4E0027F401 /* NSString+stripHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+stripHTML.h"; sourceTree = "<group>"; };
@@ -196,6 +249,12 @@
 		DC4AD69F1846F70100F0365B /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				DC0329FF18EE730B007D7002 /* walking@2x.png */,
+				DC032A0018EE730B007D7002 /* bus@2x.png */,
+				DCDE8F5818ED16BD001AAB4B /* arrow_left@2x.png */,
+				DCC654FF18ECEB4A00BE8C29 /* event_duration@2x.png */,
+				DCC6550018ECEB4A00BE8C29 /* event_location@2x.png */,
+				DCF3C25918E62F0800819372 /* phone@2x.png */,
 				DCFC90F01865736A0027F401 /* calendar-empty_sel@2x.png */,
 				DCFC910B186579460027F401 /* facebook@2x.png */,
 				DCFC910C186579460027F401 /* globe@2x.png */,
@@ -226,6 +285,10 @@
 				DCFC90CB18652A4E0027F401 /* NSString+stripHTML.h */,
 				DCFC90CC18652A4E0027F401 /* NSString+stripHTML.m */,
 				DCCE6DF3184715190086F4DE /* CKCalendarView.m */,
+				DC032A0918EEED63007D7002 /* NSString+HTML.h */,
+				DC032A0A18EEED63007D7002 /* NSString+HTML.m */,
+				DC032A0C18EEEDF0007D7002 /* GTMNString+HTML.h */,
+				DC032A0D18EEEDF0007D7002 /* GTMNString+HTML.m */,
 			);
 			name = "Third Party Classes";
 			sourceTree = "<group>";
@@ -279,11 +342,14 @@
 		DC8FC9611846DCDA00B764A6 /* NYEpsilon */ = {
 			isa = PBXGroup;
 			children = (
+				DCDE8F5A18ED1AEF001AAB4B /* pop.mp3 */,
 				DCFC90D2186560AE0027F401 /* Transportation */,
 				DC4AD6D31847031D00F0365B /* The House */,
 				DC4AD6C51847009200F0365B /* Third Party Classes */,
 				DC4AD69F1846F70100F0365B /* Icons */,
 				DC8FC96D1846DCDA00B764A6 /* Main.storyboard */,
+				DCDE8F5518ED11F9001AAB4B /* UIImage+Tint.h */,
+				DCDE8F5618ED11F9001AAB4B /* UIImage+Tint.m */,
 				DCFC9108186577560027F401 /* MenuViewController.h */,
 				DCFC9109186577560027F401 /* MenuViewController.m */,
 				DCFC90D3186570B10027F401 /* MainTabBarViewController.h */,
@@ -292,10 +358,14 @@
 				DC8FC96B1846DCDA00B764A6 /* AppDelegate.m */,
 				DC4AD6961846F35700F0365B /* BrotherCell.h */,
 				DC4AD6971846F35700F0365B /* BrotherCell.m */,
+				DC941C9F18E5BE00008DBF74 /* Brother.h */,
+				DC941CA018E5BE00008DBF74 /* Brother.m */,
 				DC8FC9731846DCDA00B764A6 /* BrothersViewController.h */,
 				DC8FC9741846DCDA00B764A6 /* BrothersViewController.m */,
 				DCCE6DF5184715970086F4DE /* EventsViewController.h */,
 				DCCE6DF6184715970086F4DE /* EventsViewController.m */,
+				DCC654FC18ECE5D500BE8C29 /* EventDetailTableViewCell.h */,
+				DCC654FD18ECE5D500BE8C29 /* EventDetailTableViewCell.m */,
 				DC8FC99D1846E11A00B764A6 /* NYEClient.h */,
 				DC8FC99E1846E11A00B764A6 /* NYEClient.m */,
 				DC716FD31868347C00E6802B /* house4.jpg */,
@@ -341,12 +411,28 @@
 		DCFC90D2186560AE0027F401 /* Transportation */ = {
 			isa = PBXGroup;
 			children = (
-				DCFC90C1186515230027F401 /* TransportCell.h */,
-				DCFC90C2186515230027F401 /* TransportCell.m */,
+				DCDE8F5C18ED1DAB001AAB4B /* NYETransportationClient.h */,
+				DCDE8F5D18ED1DAB001AAB4B /* NYETransportationClient.m */,
 				DCFC90BE18650C1E0027F401 /* TransportationViewController.h */,
 				DCFC90BF18650C1E0027F401 /* TransportationViewController.m */,
 				DCFC90C4186518F10027F401 /* TransportationRouteViewController.h */,
 				DCFC90C5186518F10027F401 /* TransportationRouteViewController.m */,
+				DCDE8F6518EDD111001AAB4B /* TravelRoute.h */,
+				DCDE8F6618EDD111001AAB4B /* TravelRoute.m */,
+				DCDE8F6818EDD11D001AAB4B /* RouteStep.h */,
+				DCDE8F6918EDD11D001AAB4B /* RouteStep.m */,
+				DCDE8F6B18EDD128001AAB4B /* TransitStep.h */,
+				DCDE8F6C18EDD128001AAB4B /* TransitStep.m */,
+				DCDE8F6E18EDD12E001AAB4B /* WalkingStep.h */,
+				DCDE8F6F18EDD12E001AAB4B /* WalkingStep.m */,
+				DCDE8F5218ED0B69001AAB4B /* TransportationRideCell.h */,
+				DCDE8F5318ED0B69001AAB4B /* TransportationRideCell.m */,
+				DCDE8F5F18ED2AA8001AAB4B /* TransportationPublicCell.h */,
+				DCDE8F6018ED2AA8001AAB4B /* TransportationPublicCell.m */,
+				DC032A0318EE85E8007D7002 /* TransitDetailCell.h */,
+				DC032A0418EE85E8007D7002 /* TransitDetailCell.m */,
+				DC032A0618EE8600007D7002 /* WalkingDetailCell.h */,
+				DC032A0718EE8600007D7002 /* WalkingDetailCell.m */,
 			);
 			name = Transportation;
 			sourceTree = "<group>";
@@ -432,25 +518,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCFC91011865736A0027F401 /* home_sel@2x.png in Resources */,
+				DCC6550118ECEB4A00BE8C29 /* event_duration@2x.png in Resources */,
 				DCFC90E4186573620027F401 /* calendar-empty@2x.png in Resources */,
 				DCFC910F186579460027F401 /* facebook@2x.png in Resources */,
 				DCFC91021865736A0027F401 /* map-marker_sel@2x.png in Resources */,
 				DC4AD6CD1847013200F0365B /* house.jpeg in Resources */,
 				DC716FD41868347C00E6802B /* house4.jpg in Resources */,
+				DCDE8F5918ED16BD001AAB4B /* arrow_left@2x.png in Resources */,
 				DC8FC9771846DCDA00B764A6 /* Images.xcassets in Resources */,
+				DCC6550218ECEB4A00BE8C29 /* event_location@2x.png in Resources */,
+				DCF3C25A18E62F0800819372 /* phone@2x.png in Resources */,
 				DCFC90E9186573620027F401 /* home@2x.png in Resources */,
 				DC4AD6CE1847013200F0365B /* house2.jpeg in Resources */,
 				DC4AD6CF1847013200F0365B /* house3.jpeg in Resources */,
 				DCFC90EA186573620027F401 /* map-marker@2x.png in Resources */,
 				DCFC90ED186573620027F401 /* warning-outline@2x.png in Resources */,
 				DCFC90E8186573620027F401 /* group@2x.png in Resources */,
+				DC032A0218EE730B007D7002 /* bus@2x.png in Resources */,
 				DCFC9111186579460027F401 /* music@2x.png in Resources */,
 				DCFC91031865736A0027F401 /* reorder_sel@2x.png in Resources */,
+				DC032A0118EE730B007D7002 /* walking@2x.png in Resources */,
 				DCFC90E5186573620027F401 /* ellipsis-horizontal@2x.png in Resources */,
 				DCFC91041865736A0027F401 /* twitter_sel@2x.png in Resources */,
 				DCFC9112186579460027F401 /* twitter@2x.png in Resources */,
 				DCFC91001865736A0027F401 /* group_sel@2x.png in Resources */,
 				DCFC9110186579460027F401 /* globe@2x.png in Resources */,
+				DCDE8F5B18ED1AEF001AAB4B /* pop.mp3 in Resources */,
 				DC8FC9661846DCDA00B764A6 /* InfoPlist.strings in Resources */,
 				DCFC90EB186573620027F401 /* reorder@2x.png in Resources */,
 				DC8FC96F1846DCDA00B764A6 /* Main.storyboard in Resources */,
@@ -520,21 +613,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC941CA118E5BE00008DBF74 /* Brother.m in Sources */,
+				DC032A0B18EEED63007D7002 /* NSString+HTML.m in Sources */,
+				DCC654FE18ECE5D500BE8C29 /* EventDetailTableViewCell.m in Sources */,
 				DCCE6DF7184715970086F4DE /* EventsViewController.m in Sources */,
 				DCFC90C6186518F10027F401 /* TransportationRouteViewController.m in Sources */,
 				DC8FC99F1846E11A00B764A6 /* NYEClient.m in Sources */,
 				DCFC910A186577560027F401 /* MenuViewController.m in Sources */,
 				DC941C9B18E5B4CA008DBF74 /* NYEpsilon.xcdatamodeld in Sources */,
+				DCDE8F5418ED0B69001AAB4B /* TransportationRideCell.m in Sources */,
 				DCFC90C018650C1E0027F401 /* TransportationViewController.m in Sources */,
 				DC8FC9751846DCDA00B764A6 /* BrothersViewController.m in Sources */,
+				DC032A0818EE8600007D7002 /* WalkingDetailCell.m in Sources */,
 				DC8FC96C1846DCDA00B764A6 /* AppDelegate.m in Sources */,
 				DC4AD6C9184700DC00F0365B /* ImageGalleryViewController.m in Sources */,
 				DC8FC9721846DCDA00B764A6 /* HouseViewController.m in Sources */,
-				DCFC90C3186515230027F401 /* TransportCell.m in Sources */,
+				DCDE8F6718EDD111001AAB4B /* TravelRoute.m in Sources */,
+				DC032A0518EE85E8007D7002 /* TransitDetailCell.m in Sources */,
 				DC4AD6981846F35700F0365B /* BrotherCell.m in Sources */,
+				DCDE8F5718ED11F9001AAB4B /* UIImage+Tint.m in Sources */,
+				DC032A0E18EEEDF0007D7002 /* GTMNString+HTML.m in Sources */,
 				DCCE6DF4184715190086F4DE /* CKCalendarView.m in Sources */,
+				DCDE8F6A18EDD11D001AAB4B /* RouteStep.m in Sources */,
+				DCDE8F6D18EDD128001AAB4B /* TransitStep.m in Sources */,
+				DCDE8F6118ED2AA8001AAB4B /* TransportationPublicCell.m in Sources */,
 				DCFC90CD18652A4E0027F401 /* NSString+stripHTML.m in Sources */,
 				DCFC90D5186570B10027F401 /* MainTabBarViewController.m in Sources */,
+				DCDE8F7018EDD12E001AAB4B /* WalkingStep.m in Sources */,
+				DCDE8F5E18ED1DAB001AAB4B /* NYETransportationClient.m in Sources */,
 				DC8FC9681846DCDA00B764A6 /* main.m in Sources */,
 				DC4AD6D21847028A00F0365B /* HouseInformationTableViewController.m in Sources */,
 			);

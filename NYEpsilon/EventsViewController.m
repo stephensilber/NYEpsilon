@@ -7,6 +7,7 @@
 //
 #import "NYEClient.h"
 #import "MBProgressHUD.h"
+#import "EventDetailTableViewCell.h"
 #import "EventsViewController.h"
 #import "AFNetworking.h"
 
@@ -25,7 +26,7 @@
 #define FONT_SIZE 15.0f
 #define CELL_CONTENT_WIDTH 320.0f
 #define CELL_CONTENT_MARGIN 5.0f
-#define k_EVENT_URL @"http://localhost:3000/rush_events/"
+#define k_EVENT_URL @"http://localhost:3000/api/events/"
 
 @implementation EventsViewController
 
@@ -38,7 +39,6 @@
     }
     return self;
 }
-
 
 - (void) goToToday:(id)sender {
     [self calendar:self.calendarView didSelectDate:[NSDate date]];
@@ -123,7 +123,7 @@
 
 - (void)calendar:(CKCalendarView *)calendar didSelectDate:(NSDate *)date {
     NSArray *day = [self fetchDayDataFromDate:date];
-    self->dayData = (day) ? day : [NSArray array];
+    dayData = (day) ? day : [NSArray array];
     [self.tableView reloadData];
 }
 
@@ -154,6 +154,10 @@
     return 1;
 }
 
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return (emptyFlag) ? 44.0f : 60.0f;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
@@ -171,25 +175,48 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"eventDetailCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    EventDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[EventDetailTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryNone;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    //Prettykit call to set up shadows, etc
-    cell.textLabel.backgroundColor = [UIColor clearColor];
-    cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
-    cell.textLabel.numberOfLines = 2;
-    
     // Show empty cell if there are no events on this day
     if(emptyFlag) {
-        cell.textLabel.text = @"No events on this day!";
+        cell.eventTitle.text = @"No events on this day!";
+        cell.eventDuration.text = nil;
+        cell.eventDurationIcon.image = nil;
     } else {
-        cell.textLabel.text = [[self->dayData objectAtIndex:indexPath.row] objectForKey:@"title"];
+        
+        NSDictionary *day = [dayData objectAtIndex:indexPath.row];
+        cell.eventTitle.text = [day objectForKey:@"title"];
+        cell.eventDurationIcon.image = [UIImage imageNamed:@"event_duration"];
+        NSLog(@"AD: %@", [day objectForKey:@"allday"]);
+        
+        if([[day objectForKey:@"allday"] intValue] == 1) {
+            cell.eventDuration.text = @"All-day event";
+        } else {
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+            [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss ZZZZ"];
+            NSDate *start = [formatter dateFromString:[day objectForKey:@"start_time"]];
+            NSDate *end = [formatter dateFromString:[day objectForKey:@"end_time"]];
+            
+            [formatter setDateFormat:@"hh:mm a"];
+        
+            if(start == end) {
+                NSString *startString = [formatter stringFromDate:start];
+                cell.eventDuration.text = [NSString stringWithFormat:@"%@", startString];
+            } else {
+                NSString *startString = [formatter stringFromDate:start];
+                NSString *endString = [formatter stringFromDate:end];
+                cell.eventDuration.text = [NSString stringWithFormat:@"%@ - %@", startString, endString];
+            }
+        }
+        
     }
     
     return cell;

@@ -52,7 +52,18 @@
     // any chars found while parsing are the stripped content
     NSString* strippedString = [parsee getCharsFound];
     
+    strippedString = [self stringWithoutParentheses:strippedString];
+    
     // get the raw text out of the parsee after parsing, and return it
     return strippedString;
+}
+
+-(NSString*)stringWithoutParentheses:(NSString*)input{
+    NSString *expression = @"\\([^()]*\\)";
+    while ([input rangeOfString:expression options:NSRegularExpressionSearch|NSCaseInsensitiveSearch].location!=NSNotFound)
+    {
+        input = [input stringByReplacingOccurrencesOfString:expression withString:@"" options:NSRegularExpressionSearch|NSCaseInsensitiveSearch range:NSMakeRange(0, [input length])];
+    }
+    return input;
 }
 @end
