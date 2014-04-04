@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleMaps/GoogleMaps.h>
 
-@interface TransportationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface TransportationViewController : UITableViewController <CLLocationManagerDelegate> {
+    CLLocationManager *locationManager;
+}
 
 @end
